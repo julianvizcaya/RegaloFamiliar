@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RegaloFamiliar — Balance de ahorro familiar" />
+  <title>RegaloFamiliar</title>
+
+  <!-- Iconos Tabler -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/css/index.css" />
+<script defer src="/js/index.js"></script>
+
+</head>
+<body>
+
+<!-- =====================================================
+     PANTALLA DE PIN
+     ===================================================== -->
+<div class="pin-screen active" id="pinScreen">
+  <div class="pin-card">
+
+    <div class="pin-logo">🎂</div>
+    <p class="pin-title">Ingresa el PIN</p>
+
+    <div class="pin-dots" id="pinDots">
+      <div class="pin-dot" id="dot0"></div>
+      <div class="pin-dot" id="dot1"></div>
+      <div class="pin-dot" id="dot2"></div>
+      <div class="pin-dot" id="dot3"></div>
+    </div>
+
+    <p class="pin-error" id="pinError">PIN incorrecto. Intenta de nuevo.</p>
+
+    <div class="pin-keypad">
+      <button class="pin-key" onclick="pinPress('1')">1</button>
+      <button class="pin-key" onclick="pinPress('2')">2</button>
+      <button class="pin-key" onclick="pinPress('3')">3</button>
+      <button class="pin-key" onclick="pinPress('4')">4</button>
+      <button class="pin-key" onclick="pinPress('5')">5</button>
+      <button class="pin-key" onclick="pinPress('6')">6</button>
+      <button class="pin-key" onclick="pinPress('7')">7</button>
+      <button class="pin-key" onclick="pinPress('8')">8</button>
+      <button class="pin-key" onclick="pinPress('9')">9</button>
+      <button class="pin-key delete" onclick="pinDelete()">
+        <i class="ti ti-backspace"></i>
+      </button>
+      <button class="pin-key zero" onclick="pinPress('0')">0</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- =====================================================
+     APP PRINCIPAL (oculta hasta pasar el PIN)
+     ===================================================== -->
+<div class="app-wrapper" id="appWrapper" style="display:none;">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <span class="navbar-brand">Regalo<span>Familiar</span></span>
+      <ul class="navbar-nav">
+        <li><a href="#" class="active" onclick="showPage('inicio', this)">Inicio</a></li>
+        <li><a href="#" onclick="showPage('participantes', this)">Participantes</a></li>
+        <li><a href="#" onclick="showPage('calendario', this)">Calendario</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ===================================================
+       PÁGINA: INICIO
+       =================================================== -->
+  <div class="page active" id="page-inicio">
+    <div class="page-content">
+
+      <!-- Header -->
+      <div class="page-header">
+        <div class="page-header-icon">🎂</div>
+        <div>
+          <h1>Balance Familiar</h1>
+          <p class="subtitle" id="headerSubtitle"></p>
+        </div>
+      </div>
+
+      <!-- Tarjeta principal de balance -->
+      <div class="balance-card">
+        <div class="balance-card-header">
+          <span class="balance-card-meta" id="fechaActualizacion"></span>
+          <span class="cycle-badge" id="cicloBadge"></span>
+        </div>
+
+        <!-- Grid de 3 stats superiores -->
+        <div class="stats-grid">
+          <div class="card">
+            <div class="card-label">
+              <i class="ti ti-users"></i> Participantes
+            </div>
+            <div class="card-value" id="totalParticipantes">—</div>
+            <div class="card-meta">
+              <a href="#" class="text-primary-color" onclick="showPage('participantes', null); return false;">
+                Ver todos <i class="ti ti-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">
+              <i class="ti ti-target"></i> Meta del grupo
+            </div>
+            <div class="card-value" id="metaGrupo">—</div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">
+              <i class="ti ti-clock"></i> Total ahorrado
+            </div>
+            <div class="card-value success" id="totalAhorrado">—</div>
+            <div class="card-meta" id="metaAhorradoMeta"></div>
+          </div>
+        </div>
+
+        <!-- Grid de 3 stats inferiores -->
+        <div class="stats-grid">
+          <div class="card">
+            <div class="card-label">
+              <i class="ti ti-trending-up"></i> Saldo pendiente
+            </div>
+            <div class="card-value danger" id="saldoPendiente">—</div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">
+              <i class="ti ti-gift"></i> Regalos entregados
+            </div>
+            <div class="card-value muted" id="totalRegalos">—</div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">
+              <i class="ti ti-wallet"></i> Fondo disponible
+            </div>
+            <div class="card-value" id="fondoDisponible">—</div>
+            <div class="card-meta">En caja actualmente</div>
+          </div>
+        </div>
+
+        <!-- Barra de progreso del ciclo -->
+        <div class="progress-section">
+          <div class="progress-header">
+            <span class="progress-label">Progreso del ciclo</span>
+            <span class="progress-percent" id="progresoPorcentaje">0%</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progresoBar" style="width: 0%"></div>
+          </div>
+          <div class="progress-footer">
+            <span id="progresoAhorrado"></span>
+            <span id="progresoMeta"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección dos columnas: próximos cumpleaños + regalos entregados -->
+      <div class="two-col">
+
+        <!-- Próximos cumpleaños -->
+        <div>
+          <p class="section-title">
+            <i class="ti ti-calendar-event"></i> Próximos Cumpleaños
+          </p>
+          <div class="birthday-list" id="proxCumpleList"></div>
+        </div>
+
+        <!-- Regalos entregados -->
+        <div>
+          <p class="section-title">
+            <i class="ti ti-gift"></i> Regalos Entregados
+          </p>
+          <div class="gift-list" id="regalosEntregadosList"></div>
+        </div>
+
+      </div>
+
+      <!-- Botones de navegación -->
+      <div class="nav-btn-row">
+        <button class="nav-btn" onclick="showPage('participantes', null)">
+          Ver participantes <i class="ti ti-arrow-right"></i>
+        </button>
+        <button class="nav-btn" onclick="showPage('calendario', null)">
+          Calendario <i class="ti ti-arrow-right"></i>
+        </button>
+      </div>
+
+    </div>
+  </div><!-- /page-inicio -->
+
+
+  <!-- ===================================================
+       PÁGINA: PARTICIPANTES
+       =================================================== -->
+  <div class="page" id="page-participantes">
+    <div class="page-content">
+
+      <div class="page-header">
+        <div class="page-header-icon">
+          <i class="ti ti-users"></i>
+        </div>
+        <div>
+          <h1>Participantes</h1>
+        </div>
+      </div>
+
+      <div class="participants-grid" id="participantsGrid"></div>
+
+      <div class="nav-btn-row">
+        <button class="nav-btn" onclick="showPage('inicio', null)">
+          Ver balance <i class="ti ti-arrow-right"></i>
+        </button>
+        <button class="nav-btn" onclick="showPage('calendario', null)">
+          Ver calendario <i class="ti ti-arrow-right"></i>
+        </button>
+      </div>
+
+    </div>
+  </div><!-- /page-participantes -->
+
+
+  <!-- ===================================================
+       PÁGINA: CALENDARIO
+       =================================================== -->
+  <div class="page" id="page-calendario">
+    <div class="page-content">
+
+      <div class="page-header">
+        <div class="page-header-icon">
+          <i class="ti ti-calendar"></i>
+        </div>
+        <div>
+          <h1>Calendario de Cumpleaños</h1>
+          <p class="subtitle" id="calendarioCiclo"></p>
+        </div>
+      </div>
+
+      <div class="calendar-grid" id="calendarGrid"></div>
+
+      <div class="calendar-next" id="calendarNext"></div>
+
+      <div class="nav-btn-row">
+        <button class="nav-btn" onclick="showPage('inicio', null)">
+          Ver balance <i class="ti ti-arrow-right"></i>
+        </button>
+        <button class="nav-btn" onclick="showPage('participantes', null)">
+          Ver participantes <i class="ti ti-arrow-right"></i>
+        </button>
+      </div>
+
+    </div>
+  </div><!-- /page-calendario -->
+
+</div><!-- /app-wrapper -->
+
+
+<!-- =====================================================
+     MODAL: HISTORIAL DE PAGOS
+     ===================================================== -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+
+    <div class="modal-header">
+      <div class="modal-header-info">
+        <h2 id="modalNombre">—</h2>
+        <p class="modal-date">
+          <i class="ti ti-cake"></i>
+          <span id="modalCumpleanos">—</span>
+        </p>
+      </div>
+      <button class="modal-close" onclick="closeModalBtn()">
+        <i class="ti ti-x"></i>
+      </button>
+    </div>
+
+    <div class="modal-stats">
+      <div class="modal-stat">
+        <div class="modal-stat-label">Meta</div>
+        <div class="modal-stat-value blue" id="modalMeta">—</div>
+      </div>
+      <div class="modal-stat">
+        <div class="modal-stat-label">Total aportado</div>
+        <div class="modal-stat-value green" id="modalAportado">—</div>
+      </div>
+      <div class="modal-stat">
+        <div class="modal-stat-label">Saldo pendiente</div>
+        <div class="modal-stat-value red" id="modalPendiente">—</div>
+      </div>
+      <div class="modal-stat">
+        <div class="modal-stat-label">1%</div>
+        <div class="modal-stat-value teal" id="modal1pct">—</div>
+      </div>
+    </div>
+
+    <div class="modal-body">
+      <table class="payments-table">
+        <thead>
+          <tr>
+            <th>Mes</th>
+            <th>Cuota</th>
+            <th>Monto pagado</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="modalPaymentsBody"></tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
