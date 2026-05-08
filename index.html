@@ -69,7 +69,7 @@
         <div class="pin__card">
           <!-- Logo -->
           <div class="pin__logo">
-            <img src="./assets/icono_logo.png" alt="Logo Regalo Familiar" />
+            <img src="assets/icono_logo.png" alt="Logo Regalo Familiar" />
           </div>
 
           <!-- Title -->
@@ -119,21 +119,31 @@
             <a class="header__brand" href="#"> RegaloFamiliar </a>
 
             <nav class="header__nav" aria-label="Navegación principal">
-              <a class="header__link header__link--active" href="#"> Inicio </a>
+              <a
+                class="header__link header__link--active"
+                href="#"
+                data-page="home"
+              >
+                Inicio
+              </a>
 
-              <a class="header__link" href="#"> Participantes </a>
+              <a class="header__link" href="#" data-page="participants">
+                Participantes
+              </a>
 
-              <a class="header__link" href="#"> Calendario </a>
+              <a class="header__link" href="#" data-page="calendar">
+                Calendario
+              </a>
             </nav>
           </div>
         </header>
 
-        <section class="home">
+        <section class="home" data-section="home">
           <div class="container home__container">
             <div class="home__hero">
               <img
                 class="home__logo"
-                src="./assets/icono_logo.png"
+                src="assets/icono_logo.png"
                 alt="Logo RegaloFamiliar"
               />
 
@@ -147,7 +157,8 @@
               <div class="balance-card__header">
                 <span>Última actualización: 4 mayo 2026</span>
                 <span class="balance-card__badge"
-                  >Ciclo Abril 2026 a Marzo 2027</span>
+                  >Ciclo Abril 2026 a Marzo 2027</span
+                >
               </div>
 
               <div class="stats-grid">
@@ -226,7 +237,49 @@
               </div>
             </section>
           </div>
-        </section>
+
+        <nav class="mobile-nav" aria-label="Navegación móvil">
+          <a
+            class="mobile-nav__link mobile-nav__link--active"
+            href="#"
+            data-page="home"
+          >
+            <i class="ri-home-5-line"></i>
+          </a>
+
+          <a class="mobile-nav__link" href="#" data-page="participants">
+            <i class="ri-group-line"></i>
+          </a>
+
+          <a class="mobile-nav__link" href="#" data-page="gifts">
+            <i class="ri-gift-line"></i>
+          </a>
+
+          <a class="mobile-nav__link" href="#" data-page="calendar">
+            <i class="ri-calendar-line"></i>
+          </a>
+        </nav>
+      </section>
+
+      <section
+        class="participants-page page is-hidden"
+        data-section="participants"
+      >
+        <div class="container">
+          <h2>Participantes</h2>
+        </div>
+      </section>
+
+      <section class="gifts-page page is-hidden" data-section="gifts">
+        <div class="container">
+          <h2>Regalos Entregados</h2>
+        </div>
+      </section>
+
+      <section class="calendar-page page is-hidden" data-section="calendar">
+        <div class="container">
+          <h2>Calendario</h2>
+        </div>
       </section>
     </main>
 
