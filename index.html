@@ -3,17 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="RegaloFamiliar — Balance de ahorro familiar" />
+
+  <!-- SEO y descripción -->
   <title>RegaloFamiliar</title>
+  <meta name="description" content="Balance del ahorro familiar para regalos de cumpleaños." />
+
+  <!-- Open Graph — imagen al compartir el link -->
+  <meta property="og:title"       content="RegaloFamiliar" />
+  <meta property="og:description" content="Mira el balance del fondo de regalos familiares." />
+  <meta property="og:image"       content="assets/icono_Logo.png" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:locale"      content="es_CO" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary" />
+  <meta name="twitter:title"       content="RegaloFamiliar" />
+  <meta name="twitter:description" content="Mira el balance del fondo de regalos familiares." />
+  <meta name="twitter:image"       content="assets/icono_Logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icono_Logo.png" />
+  <link rel="apple-touch-icon"      href="assets/icono_Logo.png" />
 
   <!-- Iconos Tabler -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
 
   <!-- Estilos -->
   <link rel="stylesheet" href="css/index.css" />
-<script defer src="js/index.js"></script>
-
-</head>
+  <script defer src="js/index.js"></script>
 <body>
 
 <!-- =====================================================
@@ -22,10 +39,12 @@
 <div class="pin-screen active" id="pinScreen">
   <div class="pin-card">
 
-    <div class="pin-logo">🎂</div>
+    <div class="pin-logo">
+      <img src="assets/icono_Logo.png" alt="RegaloFamiliar" />
+    </div>
     <p class="pin-title">Ingresa el PIN</p>
 
-    <div class="pin-dots" id="pinDots">
+    <div class="pin-dots">
       <div class="pin-dot" id="dot0"></div>
       <div class="pin-dot" id="dot1"></div>
       <div class="pin-dot" id="dot2"></div>
@@ -55,21 +74,43 @@
 
 
 <!-- =====================================================
-     APP PRINCIPAL (oculta hasta pasar el PIN)
+     APP PRINCIPAL
      ===================================================== -->
 <div class="app-wrapper" id="appWrapper" style="display:none;">
 
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="navbar-inner">
-      <span class="navbar-brand">Regalo<span>Familiar</span></span>
-      <ul class="navbar-nav">
-        <li><a href="#" class="active" onclick="showPage('inicio', this)">Inicio</a></li>
-        <li><a href="#" onclick="showPage('participantes', this)">Participantes</a></li>
-        <li><a href="#" onclick="showPage('calendario', this)">Calendario</a></li>
+
+      <!-- Brand con logo -->
+      <span class="navbar-brand">
+        <img src="assets/icono_Logo.png" alt="Logo" />
+        Regalo<span>Familiar</span>
+      </span>
+
+      <!-- Nav desktop -->
+      <ul class="navbar-nav" id="desktopNav">
+        <li><a href="#" class="active" onclick="showPage('inicio', this); return false;">Inicio</a></li>
+        <li><a href="#" onclick="showPage('participantes', this); return false;">Participantes</a></li>
+        <li><a href="#" onclick="showPage('calendario', this); return false;">Calendario</a></li>
       </ul>
+
+      <!-- Botón hamburguesa (solo mobile) -->
+      <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="Abrir menú">
+        <i class="ti ti-menu-2" id="hamburgerIcon"></i>
+      </button>
+
     </div>
   </nav>
+
+  <!-- Menú mobile desplegable -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#" class="active" id="mobileLink-inicio"       onclick="showPageMobile('inicio');       return false;">Inicio</a></li>
+      <li><a href="#"               id="mobileLink-participantes" onclick="showPageMobile('participantes'); return false;">Participantes</a></li>
+      <li><a href="#"               id="mobileLink-calendario"    onclick="showPageMobile('calendario');    return false;">Calendario</a></li>
+    </ul>
+  </div>
 
 
   <!-- ===================================================
@@ -78,28 +119,25 @@
   <div class="page active" id="page-inicio">
     <div class="page-content">
 
-      <!-- Header -->
       <div class="page-header">
-        <div class="page-header-icon">🎂</div>
+        <div class="page-header-icon">
+          <img src="assets/icono_Logo.png" alt="" style="width:28px;height:28px;border-radius:50%;object-fit:cover;" />
+        </div>
         <div>
           <h1>Balance Familiar</h1>
           <p class="subtitle" id="headerSubtitle"></p>
         </div>
       </div>
 
-      <!-- Tarjeta principal de balance -->
       <div class="balance-card">
         <div class="balance-card-header">
           <span class="balance-card-meta" id="fechaActualizacion"></span>
           <span class="cycle-badge" id="cicloBadge"></span>
         </div>
 
-        <!-- Grid de 3 stats superiores -->
         <div class="stats-grid">
           <div class="card">
-            <div class="card-label">
-              <i class="ti ti-users"></i> Participantes
-            </div>
+            <div class="card-label"><i class="ti ti-users"></i> Participantes</div>
             <div class="card-value" id="totalParticipantes">—</div>
             <div class="card-meta">
               <a href="#" class="text-primary-color" onclick="showPage('participantes', null); return false;">
@@ -107,56 +145,40 @@
               </a>
             </div>
           </div>
-
           <div class="card">
-            <div class="card-label">
-              <i class="ti ti-target"></i> Meta del grupo
-            </div>
+            <div class="card-label"><i class="ti ti-target"></i> Meta del grupo</div>
             <div class="card-value" id="metaGrupo">—</div>
           </div>
-
           <div class="card">
-            <div class="card-label">
-              <i class="ti ti-clock"></i> Total ahorrado
-            </div>
+            <div class="card-label"><i class="ti ti-clock"></i> Total ahorrado</div>
             <div class="card-value success" id="totalAhorrado">—</div>
             <div class="card-meta" id="metaAhorradoMeta"></div>
           </div>
         </div>
 
-        <!-- Grid de 3 stats inferiores -->
         <div class="stats-grid">
           <div class="card">
-            <div class="card-label">
-              <i class="ti ti-trending-up"></i> Saldo pendiente
-            </div>
+            <div class="card-label"><i class="ti ti-trending-up"></i> Saldo pendiente</div>
             <div class="card-value danger" id="saldoPendiente">—</div>
           </div>
-
           <div class="card">
-            <div class="card-label">
-              <i class="ti ti-gift"></i> Regalos entregados
-            </div>
+            <div class="card-label"><i class="ti ti-gift"></i> Regalos entregados</div>
             <div class="card-value muted" id="totalRegalos">—</div>
           </div>
-
           <div class="card">
-            <div class="card-label">
-              <i class="ti ti-wallet"></i> Fondo disponible
-            </div>
+            <div class="card-label"><i class="ti ti-wallet"></i> Fondo disponible</div>
             <div class="card-value" id="fondoDisponible">—</div>
             <div class="card-meta">En caja actualmente</div>
           </div>
         </div>
 
-        <!-- Barra de progreso del ciclo -->
         <div class="progress-section">
           <div class="progress-header">
             <span class="progress-label">Progreso del ciclo</span>
             <span class="progress-percent" id="progresoPorcentaje">0%</span>
           </div>
           <div class="progress-bar-track">
-            <div class="progress-bar-fill" id="progresoBar" style="width: 0%"></div>
+            <div class="progress-bar-fill" id="progresoBar" style="width:0%"></div>
           </div>
           <div class="progress-footer">
             <span id="progresoAhorrado"></span>
@@ -165,28 +187,21 @@
         </div>
       </div>
 
-      <!-- Sección dos columnas: próximos cumpleaños + regalos entregados -->
       <div class="two-col">
-
-        <!-- Próximos cumpleaños -->
         <div>
           <p class="section-title">
             <i class="ti ti-calendar-event"></i> Próximos Cumpleaños
           </p>
           <div class="birthday-list" id="proxCumpleList"></div>
         </div>
-
-        <!-- Regalos entregados -->
         <div>
           <p class="section-title">
             <i class="ti ti-gift"></i> Regalos Entregados
           </p>
           <div class="gift-list" id="regalosEntregadosList"></div>
         </div>
-
       </div>
 
-      <!-- Botones de navegación -->
       <div class="nav-btn-row">
         <button class="nav-btn" onclick="showPage('participantes', null)">
           Ver participantes <i class="ti ti-arrow-right"></i>
@@ -197,7 +212,7 @@
       </div>
 
     </div>
-  </div><!-- /page-inicio -->
+  </div>
 
 
   <!-- ===================================================
@@ -207,12 +222,8 @@
     <div class="page-content">
 
       <div class="page-header">
-        <div class="page-header-icon">
-          <i class="ti ti-users"></i>
-        </div>
-        <div>
-          <h1>Participantes</h1>
-        </div>
+        <div class="page-header-icon"><i class="ti ti-users"></i></div>
+        <div><h1>Participantes</h1></div>
       </div>
 
       <div class="participants-grid" id="participantsGrid"></div>
@@ -227,7 +238,7 @@
       </div>
 
     </div>
-  </div><!-- /page-participantes -->
+  </div>
 
 
   <!-- ===================================================
@@ -237,9 +248,7 @@
     <div class="page-content">
 
       <div class="page-header">
-        <div class="page-header-icon">
-          <i class="ti ti-calendar"></i>
-        </div>
+        <div class="page-header-icon"><i class="ti ti-calendar"></i></div>
         <div>
           <h1>Calendario de Cumpleaños</h1>
           <p class="subtitle" id="calendarioCiclo"></p>
@@ -247,7 +256,6 @@
       </div>
 
       <div class="calendar-grid" id="calendarGrid"></div>
-
       <div class="calendar-next" id="calendarNext"></div>
 
       <div class="nav-btn-row">
@@ -260,7 +268,7 @@
       </div>
 
     </div>
-  </div><!-- /page-calendario -->
+  </div>
 
 </div><!-- /app-wrapper -->
 
@@ -308,7 +316,7 @@
         <thead>
           <tr>
             <th>Mes</th>
-            <th>Cuota</th>
+            <th class="col-cuota-header">Cuota</th>
             <th>Monto pagado</th>
             <th>Estado</th>
           </tr>
