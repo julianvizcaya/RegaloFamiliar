@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Participantes | RegaloFamiliar</title>
+    <meta
+      name="description"
+      content="Listado de participantes del sistema RegaloFamiliar."
+    />
+
+    <link rel="icon" type="image/png" href="assets/icono_logo.png" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/index.css" />
+    <script defer src="js/participantes.js"></script>
+  </head>
+
+  <body>
+    <main class="participants-page-main">
+      <header class="header">
+        <div class="container header__container">
+          <a class="header__brand" href="index.html">RegaloFamiliar</a>
+
+          <nav class="header__nav" aria-label="Navegación principal">
+            <a class="header__link" href="index.html">Inicio</a>
+            <a
+              class="header__link header__link--active"
+              href="participantes.html"
+            >
+              Participantes
+            </a>
+            <a class="header__link" href="#">Calendario</a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="participants">
+        <div class="container participants__container">
+          <div class="participants__hero">
+            <img
+              class="participants__logo"
+              src="assets/icono_logo.png"
+              alt="Logo RegaloFamiliar"
+            />
+
+            <h1 class="participants__title">Participantes</h1>
+          </div>
+
+          <!-- CARDS DE PARTICIPANTES -->
+          <div class="participants-search">
+            <i class="ri-search-line"></i>
+
+            <input
+              type="text"
+              id="participantsSearch"
+              placeholder="Buscar participante..."
+            />
+          </div>
+
+          <section class="participants-grid" id="participantsGrid">
+            <!-- CARD ANDREA -->
+            <!-- <article class="participant-card">
+              <div class="participant-card__header">
+                <div>
+                  <h2 class="participant-card__name">Andrea</h2>
+
+                  <p class="participant-card__date">
+                    <i class="ri-gift-line"></i>
+                    13 Agosto / 2026
+                  </p>
+                </div>
+
+                <span
+                  class="participant-card__status participant-card__status--pending"
+                >
+                  <i class="ri-information-line"></i>
+                  Pendiente
+                </span>
+              </div>
+
+              <div class="participant-card__body">
+                <div class="participant-card__row">
+                  <span>Meta ahorro:</span>
+                  <strong class="text-primary">$1’500.000</strong>
+                </div>
+
+                <div class="participant-card__row">
+                  <span>Cuota mensual:</span>
+                  <strong>$125.000</strong>
+                </div>
+
+                <div class="participant-card__row">
+                  <span>1%:</span>
+                  <strong class="text-danger">Pendiente</strong>
+                </div>
+              </div>
+
+              <div class="participant-card__progress">
+                <div class="participant-card__progress-head">
+                  <span>Progreso:</span>
+                  <strong>0%</strong>
+                </div>
+
+                <div class="participant-card__bar">
+                  <span style="width: 0%"></span>
+                </div>
+              </div>
+
+              <a class="participant-card__link" href="#">
+                <i class="ri-edit-box-line"></i>Ver historial de pagos</a>
+            </article> -->
+            <!-- /CARD ANDREA -->
+          </section>
+          <!-- /CARDS DE PARTICIPANTES -->
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
