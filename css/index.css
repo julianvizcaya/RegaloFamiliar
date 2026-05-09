@@ -838,3 +838,245 @@ p {
     box-shadow: 0 8px 18px rgba(56, 125, 235, 0.35);
   }
 }
+
+/* =========================================================
+   HOME LISTS
+========================================================= */
+
+.home-lists {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2.4rem;
+
+  width: 100%;
+  max-width: 112rem;
+
+  margin: 4rem auto 0;
+}
+
+.home-list {
+  width: 100%;
+}
+
+.home-list__title {
+  margin-bottom: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--color-text);
+}
+
+.home-list__title i {
+  color: var(--color-primary);
+}
+
+.home-list__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ITEMS */
+
+.birthday-item,
+.gift-item {
+  min-height: 86px;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1.1rem 1.25rem;
+
+  background: linear-gradient(180deg, #f9f9f9 0%, #eff6ff 100%);
+
+  border-radius: 1.25rem;
+
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+}
+
+.birthday-item__icon,
+.gift-item__icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0.9rem;
+
+  font-size: 1.35rem;
+}
+
+.birthday-item__icon {
+  background: rgba(51, 112, 212, 0.12);
+  color: var(--color-primary);
+}
+
+.gift-item__icon {
+  background: rgba(19, 212, 147, 0.14);
+  color: var(--color-success);
+}
+
+.birthday-item__info,
+.gift-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.birthday-item__info strong,
+.gift-item__info strong {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.birthday-item__info span,
+.gift-item__info span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+.birthday-item__amount,
+.gift-item__amount {
+  padding: 0.45rem 0.9rem;
+
+  border-radius: var(--radius-pill);
+
+  font-size: 0.95rem;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.birthday-item__amount {
+  background: rgba(51, 112, 212, 0.12);
+  color: var(--color-primary);
+}
+
+.gift-item__amount {
+  background: rgba(19, 212, 147, 0.14);
+  color: var(--color-success);
+}
+
+/* RESPONSIVE HOME LISTS */
+
+@media screen and (max-width: 768px) {
+  .home-lists {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    padding-bottom: 6rem;
+  }
+
+  .home-list__title {
+    justify-content: center;
+    text-align: center;
+    font-size: 1.35rem;
+  }
+
+  .birthday-item,
+  .gift-item {
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+
+    gap: 0.85rem;
+  }
+
+  .birthday-item__amount,
+  .gift-item__amount {
+    justify-self: end;
+    font-size: 0.9rem;
+    padding: 0.45rem 0.8rem;
+  }
+}
+
+/* ================================
+   HOME ACTIONS
+================================ */
+
+.home-actions {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.home-action {
+  width: 100%;
+  min-height: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.75rem 1rem;
+
+  background: transparent;
+  border: 1px solid #475569;
+  border-radius: 0.45rem;
+
+  color: #475569;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.home-action:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.home-action i {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .home-actions {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .home-action {
+    width: 90%;
+    margin: 0 auto;
+
+    height: 3.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 1.8rem;
+
+    background: transparent;
+    border: 2px solid #1e293b;
+    border-radius: 1rem;
+
+    color: #475569;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .home-action i {
+    font-size: 1.5rem;
+  }
+}

@@ -143,7 +143,7 @@
             <div class="home__hero">
               <img
                 class="home__logo"
-                src="assets/icono_logo.png"
+                src="/assets/icono_logo.png"
                 alt="Logo RegaloFamiliar"
               />
 
@@ -236,6 +236,131 @@
                 </div>
               </div>
             </section>
+
+            <section class="home-lists">
+
+  <!-- =========================
+       PRÓXIMOS CUMPLEAÑOS
+  ========================== -->
+  <article class="home-list">
+
+    <h2 class="home-list__title">
+      <i class="ri-calendar-event-line"></i>
+      Próximos Cumpleaños
+    </h2>
+
+    <div class="home-list__card">
+
+      <div class="birthday-item">
+        <i class="birthday-item__icon ri-gift-line"></i>
+
+        <div class="birthday-item__info">
+          <strong>Valery</strong>
+          <span>11 Julio 2026</span>
+        </div>
+
+        <span class="birthday-item__amount">
+          $3’000.000
+        </span>
+      </div>
+
+      <div class="birthday-item">
+        <i class="birthday-item__icon ri-gift-line"></i>
+
+        <div class="birthday-item__info">
+          <strong>Demri</strong>
+          <span>15 Julio 2026</span>
+        </div>
+
+        <span class="birthday-item__amount">
+          $1’500.000
+        </span>
+      </div>
+
+      <div class="birthday-item">
+        <i class="birthday-item__icon ri-gift-line"></i>
+
+        <div class="birthday-item__info">
+          <strong>Andrea</strong>
+          <span>13 Agosto 2026</span>
+        </div>
+
+        <span class="birthday-item__amount">
+          $1’500.000
+        </span>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- =========================
+       REGALOS ENTREGADOS
+  ========================== -->
+  <article class="home-list">
+
+    <h2 class="home-list__title">
+      <i class="ri-gift-line"></i>
+      Regalos Entregados
+    </h2>
+
+    <div class="home-list__card">
+
+      <div class="gift-item">
+        <i class="gift-item__icon ri-check-double-line"></i>
+
+        <div class="gift-item__info">
+          <strong>Vacío</strong>
+          <span>-</span>
+        </div>
+
+        <span class="gift-item__amount">
+          $0
+        </span>
+      </div>
+
+      <div class="gift-item">
+        <i class="gift-item__icon ri-check-double-line"></i>
+
+        <div class="gift-item__info">
+          <strong>Vacío</strong>
+          <span>-</span>
+        </div>
+
+        <span class="gift-item__amount">
+          $0
+        </span>
+      </div>
+
+      <div class="gift-item">
+        <i class="gift-item__icon ri-check-double-line"></i>
+
+        <div class="gift-item__info">
+          <strong>Vacío</strong>
+          <span>-</span>
+        </div>
+
+        <span class="gift-item__amount">
+          $0
+        </span>
+      </div>
+
+    </div>
+  </article>
+
+  <section class="home-actions">
+  <a class="home-action" href="#" data-page="participants">
+    <span>Ver participantes</span>
+    <i class="ri-arrow-right-line"></i>
+  </a>
+
+  <a class="home-action" href="#" data-page="calendar">
+    <span>Calendario</span>
+    <i class="ri-arrow-right-line"></i>
+  </a>
+</section>
+
+</section>
+
           </div>
 
         <nav class="mobile-nav" aria-label="Navegación móvil">
@@ -287,340 +412,6 @@
      HASTA ACA VOY ACTUALIZANDO
      ===================================================== -->
 
-    <!-- =====================================================
-     APP PRINCIPAL
-     ===================================================== -->
-    <div class="app-wrapper" id="appWrapper" style="display: none">
-      <!-- NAVBAR -->
-      <nav class="navbar">
-        <div class="navbar-inner">
-          <!-- Brand con logo -->
-          <span class="navbar-brand">
-            <img src="#" alt="Logo" />
-            Regalo<span>Familiar</span>
-          </span>
-
-          <!-- Nav desktop -->
-          <ul class="navbar-nav" id="desktopNav">
-            <li>
-              <a
-                href="#"
-                class="active"
-                onclick="
-                  showPage('inicio', this);
-                  return false;
-                "
-                >Inicio</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                onclick="
-                  showPage('participantes', this);
-                  return false;
-                "
-                >Participantes</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                onclick="
-                  showPage('calendario', this);
-                  return false;
-                "
-                >Calendario</a
-              >
-            </li>
-          </ul>
-
-          <!-- Botón hamburguesa (solo mobile) -->
-          <button
-            class="hamburger-btn"
-            id="hamburgerBtn"
-            onclick="toggleMobileMenu()"
-            aria-label="Abrir menú"
-          >
-            <i class="ti ti-menu-2" id="hamburgerIcon"></i>
-          </button>
-        </div>
-      </nav>
-
-      <!-- Menú mobile desplegable -->
-      <div class="mobile-menu" id="mobileMenu">
-        <ul>
-          <li>
-            <a
-              href="#"
-              class="active"
-              id="mobileLink-inicio"
-              onclick="
-                showPageMobile('inicio');
-                return false;
-              "
-              >Inicio</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              id="mobileLink-participantes"
-              onclick="
-                showPageMobile('participantes');
-                return false;
-              "
-              >Participantes</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              id="mobileLink-calendario"
-              onclick="
-                showPageMobile('calendario');
-                return false;
-              "
-              >Calendario</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <!-- ===================================================
-       PÁGINA: INICIO
-       =================================================== -->
-      <div class="page active" id="page-inicio">
-        <div class="page-content">
-          <div class="page-header">
-            <div class="page-header-icon">
-              <img
-                src="#"
-                alt=""
-                style="
-                  width: 28px;
-                  height: 28px;
-                  border-radius: 50%;
-                  object-fit: cover;
-                "
-              />
-            </div>
-            <div>
-              <h1>Balance Familiar</h1>
-              <p class="subtitle" id="headerSubtitle"></p>
-            </div>
-          </div>
-
-          <div class="balance-card">
-            <div class="balance-card-header">
-              <span class="balance-card-meta" id="fechaActualizacion"></span>
-              <span class="cycle-badge" id="cicloBadge"></span>
-            </div>
-
-            <div class="stats-grid">
-              <div class="card">
-                <div class="card-label">
-                  <i class="ti ti-users"></i> Participantes
-                </div>
-                <div class="card-value" id="totalParticipantes">—</div>
-                <div class="card-meta">
-                  <a
-                    href="#"
-                    class="text-primary-color"
-                    onclick="
-                      showPage('participantes', null);
-                      return false;
-                    "
-                  >
-                    Ver todos <i class="ti ti-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-label">
-                  <i class="ti ti-target"></i> Meta del grupo
-                </div>
-                <div class="card-value" id="metaGrupo">—</div>
-              </div>
-              <div class="card">
-                <div class="card-label">
-                  <i class="ti ti-clock"></i> Total ahorrado
-                </div>
-                <div class="card-value success" id="totalAhorrado">—</div>
-                <div class="card-meta" id="metaAhorradoMeta"></div>
-              </div>
-            </div>
-
-            <div class="stats-grid">
-              <div class="card">
-                <div class="card-label">
-                  <i class="ti ti-trending-up"></i> Saldo pendiente
-                </div>
-                <div class="card-value danger" id="saldoPendiente">—</div>
-              </div>
-              <div class="card">
-                <div class="card-label">
-                  <i class="ti ti-gift"></i> Regalos entregados
-                </div>
-                <div class="card-value muted" id="totalRegalos">—</div>
-              </div>
-              <div class="card">
-                <div class="card-label">
-                  <i class="ti ti-wallet"></i> Fondo disponible
-                </div>
-                <div class="card-value" id="fondoDisponible">—</div>
-                <div class="card-meta">En caja actualmente</div>
-              </div>
-            </div>
-
-            <div class="progress-section">
-              <div class="progress-header">
-                <span class="progress-label">Progreso del ciclo</span>
-                <span class="progress-percent" id="progresoPorcentaje">0%</span>
-              </div>
-              <div class="progress-bar-track">
-                <div
-                  class="progress-bar-fill"
-                  id="progresoBar"
-                  style="width: 0%"
-                ></div>
-              </div>
-              <div class="progress-footer">
-                <span id="progresoAhorrado"></span>
-                <span id="progresoMeta"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="two-col">
-            <div>
-              <p class="section-title">
-                <i class="ti ti-calendar-event"></i> Próximos Cumpleaños
-              </p>
-              <div class="birthday-list" id="proxCumpleList"></div>
-            </div>
-            <div>
-              <p class="section-title">
-                <i class="ti ti-gift"></i> Regalos Entregados
-              </p>
-              <div class="gift-list" id="regalosEntregadosList"></div>
-            </div>
-          </div>
-
-          <div class="nav-btn-row">
-            <button class="nav-btn" onclick="showPage('participantes', null)">
-              Ver participantes <i class="ti ti-arrow-right"></i>
-            </button>
-            <button class="nav-btn" onclick="showPage('calendario', null)">
-              Calendario <i class="ti ti-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===================================================
-       PÁGINA: PARTICIPANTES
-       =================================================== -->
-      <div class="page" id="page-participantes">
-        <div class="page-content">
-          <div class="page-header">
-            <div class="page-header-icon"><i class="ti ti-users"></i></div>
-            <div><h1>Participantes</h1></div>
-          </div>
-
-          <div class="participants-grid" id="participantsGrid"></div>
-
-          <div class="nav-btn-row">
-            <button class="nav-btn" onclick="showPage('inicio', null)">
-              Ver balance <i class="ti ti-arrow-right"></i>
-            </button>
-            <button class="nav-btn" onclick="showPage('calendario', null)">
-              Ver calendario <i class="ti ti-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===================================================
-       PÁGINA: CALENDARIO
-       =================================================== -->
-      <div class="page" id="page-calendario">
-        <div class="page-content">
-          <div class="page-header">
-            <div class="page-header-icon"><i class="ti ti-calendar"></i></div>
-            <div>
-              <h1>Calendario de Cumpleaños</h1>
-              <p class="subtitle" id="calendarioCiclo"></p>
-            </div>
-          </div>
-
-          <div class="calendar-grid" id="calendarGrid"></div>
-          <div class="calendar-next" id="calendarNext"></div>
-
-          <div class="nav-btn-row">
-            <button class="nav-btn" onclick="showPage('inicio', null)">
-              Ver balance <i class="ti ti-arrow-right"></i>
-            </button>
-            <button class="nav-btn" onclick="showPage('participantes', null)">
-              Ver participantes <i class="ti ti-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /app-wrapper -->
-
-    <!-- =====================================================
-     MODAL: HISTORIAL DE PAGOS
-     ===================================================== -->
-    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-      <div class="modal" id="modal">
-        <div class="modal-header">
-          <div class="modal-header-info">
-            <h2 id="modalNombre">—</h2>
-            <p class="modal-date">
-              <i class="ti ti-cake"></i>
-              <span id="modalCumpleanos">—</span>
-            </p>
-          </div>
-          <button class="modal-close" onclick="closeModalBtn()">
-            <i class="ti ti-x"></i>
-          </button>
-        </div>
-
-        <div class="modal-stats">
-          <div class="modal-stat">
-            <div class="modal-stat-label">Meta</div>
-            <div class="modal-stat-value blue" id="modalMeta">—</div>
-          </div>
-          <div class="modal-stat">
-            <div class="modal-stat-label">Total aportado</div>
-            <div class="modal-stat-value green" id="modalAportado">—</div>
-          </div>
-          <div class="modal-stat">
-            <div class="modal-stat-label">Saldo pendiente</div>
-            <div class="modal-stat-value red" id="modalPendiente">—</div>
-          </div>
-          <div class="modal-stat">
-            <div class="modal-stat-label">1%</div>
-            <div class="modal-stat-value teal" id="modal1pct">—</div>
-          </div>
-        </div>
-
-        <div class="modal-body">
-          <table class="payments-table">
-            <thead>
-              <tr>
-                <th>Mes</th>
-                <th class="col-cuota-header">Cuota</th>
-                <th>Monto pagado</th>
-                <th>Estado</th>
-              </tr>
-            </thead>
-            <tbody id="modalPaymentsBody"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+    
   </body>
 </html>
