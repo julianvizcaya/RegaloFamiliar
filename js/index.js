@@ -33,12 +33,8 @@ function resetPin() {
 
 function validatePin() {
   if (pinActual === PIN_CORRECTO) {
-    const pinScreen = document.querySelector(".pin");
-    const app = document.querySelector("[data-app]");
-
-    pinScreen.classList.add("is-hidden");
-    app.classList.remove("is-hidden");
-
+    sessionStorage.setItem("isAuthenticated", "true");
+    window.location.href = "dashboard.html";
     return;
   }
 
