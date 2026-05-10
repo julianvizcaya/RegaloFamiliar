@@ -2,11 +2,11 @@ const participants = [
   {
     name: "Andrea",
     birthday: "13 Agosto / 2026",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1500000,
     monthlyFee: 125000,
-    initialPercentPaid: false,
-    progress: 0
+    initialPercentPaid: true,
+    progress: 0.08,
   },
   {
     name: "Bibian",
@@ -15,7 +15,7 @@ const participants = [
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.08,
   },
   {
     name: "Brayan",
@@ -24,7 +24,7 @@ const participants = [
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.08,
   },
   {
     name: "Demri",
@@ -33,7 +33,7 @@ const participants = [
     goal: 1500000,
     monthlyFee: 125000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.08,
   },
   {
     name: "Fabián",
@@ -42,7 +42,7 @@ const participants = [
     goal: 1500000,
     monthlyFee: 125000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.08,
   },
   {
     name: "Geraldine",
@@ -51,7 +51,7 @@ const participants = [
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.08,
   },
   {
     name: "Hugo",
@@ -60,7 +60,7 @@ const participants = [
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: false,
-    progress: 8
+    progress: 0.08,
   },
   {
     name: "Inés",
@@ -69,7 +69,7 @@ const participants = [
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.08,
   },
   {
     name: "Julián",
@@ -78,8 +78,84 @@ const participants = [
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 1,
+
+    payments: [
+      {
+        month: "Abril",
+        fee: 150000,
+        paid: 150000,
+        status: "Pagado",
+      },
+      {
+        month: "Mayo",
+        fee: 150000,
+        paid: 0,
+        status: "Próximo",
+      },
+      {
+        month: "Junio",
+        fee: 150000,
+        paid: 0,
+        status: "Próximo",
+      },
+      {
+        month: "Julio",
+        fee: 150000,
+        paid: 0,
+        status: "Próximo",
+      },
+      {
+        month: "Agosto",
+        fee: 150000,
+        paid: 0,
+        status: "Próximo",
+      },
+      {
+        month: "Septiembre",
+        fee: 150000,
+        paid: 0,
+        status: "Próximo",
+      },
+      {
+        month: "Octubre",
+        fee: 150000,
+        paid: 0,
+        status: "Próximo",
+      },
+      {
+        month: "Noviembre",
+        fee: 150000,
+        paid: 0,
+        status: "Próximo",
+      },
+      {
+        month: "Diciembre",
+        fee: 150000,
+        paid: 0,
+        status: "Próximo",
+      },
+      {
+        month: "Enero",
+        fee: 150000,
+        paid: 0,
+        status: "Próximo",
+      },
+      {
+        month: "Febrero",
+        fee: 150000,
+        paid: 0,
+        status: "Próximo",
+      },
+      {
+        month: "Marzo",
+        fee: 150000,
+        paid: 0,
+        status: "Próximo",
+      },
+    ],
   },
+
   {
     name: "Marinita",
     birthday: "14 Mayo / 2027",
@@ -87,7 +163,7 @@ const participants = [
     goal: 1500000,
     monthlyFee: 125000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 1,
   },
   {
     name: "Mathías",
@@ -96,7 +172,7 @@ const participants = [
     goal: 3000000,
     monthlyFee: 250000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.08,
   },
   {
     name: "Nancy",
@@ -105,7 +181,7 @@ const participants = [
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.08,
   },
   {
     name: "Naty",
@@ -114,7 +190,7 @@ const participants = [
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.08,
   },
   {
     name: "Nicolás",
@@ -123,7 +199,7 @@ const participants = [
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: false,
-    progress: 0
+    progress: 0,
   },
   {
     name: "Nicole",
@@ -132,7 +208,7 @@ const participants = [
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: false,
-    progress: 0
+    progress: 0,
   },
   {
     name: "Óscar",
@@ -141,7 +217,7 @@ const participants = [
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.8,
   },
   {
     name: "Peter",
@@ -150,7 +226,7 @@ const participants = [
     goal: 3000000,
     monthlyFee: 250000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.8,
   },
   {
     name: "Tere",
@@ -159,7 +235,7 @@ const participants = [
     goal: 1500000,
     monthlyFee: 125000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.8,
   },
   {
     name: "Teresita",
@@ -168,7 +244,7 @@ const participants = [
     goal: 1500000,
     monthlyFee: 125000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.8,
   },
   {
     name: "Thomas",
@@ -177,7 +253,7 @@ const participants = [
     goal: 3000000,
     monthlyFee: 250000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.8,
   },
   {
     name: "Valery",
@@ -186,7 +262,7 @@ const participants = [
     goal: 3000000,
     monthlyFee: 250000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.8,
   },
   {
     name: "Yaz",
@@ -195,7 +271,7 @@ const participants = [
     goal: 3000000,
     monthlyFee: 250000,
     initialPercentPaid: true,
-    progress: 8
+    progress: 0.8,
   },
 ];
 
@@ -205,9 +281,24 @@ function formatMoney(value) {
   return `$${value.toLocaleString("es-CO").replace(/,/g, "’")}`;
 }
 
+function getParticipantTotalPaid(participant) {
+  return participant.payments?.reduce((total, payment) => {
+    return total + payment.paid;
+  }, 0) || 0;
+}
+
+function getParticipantProgress(participant) {
+  const totalPaid = getParticipantTotalPaid(participant);
+
+  if (participant.goal === 0) return 0;
+
+  return Math.round((totalPaid / participant.goal) * 100);
+}
+
 function createParticipantCard(participant) {
   const isPending = participant.status === "Pendiente";
-
+  const progress = getParticipantProgress(participant);
+  
   return `
     <article class="participant-card">
 
@@ -255,27 +346,29 @@ function createParticipantCard(participant) {
       <div class="participant-card__progress">
         <div class="participant-card__progress-head">
           <span>Progreso:</span>
-          <strong>${participant.progress}%</strong>
+          <strong>${progress}%</strong>
         </div>
 
         <div class="participant-card__bar">
-          <span style="width: ${participant.progress}%;"></span>
+          <span style="width: ${progress}%;"></span>
         </div>
       </div>
 
-      <a class="participant-card__link" href="#">
+      <button
+        class="participant-card__link"
+        type="button"
+        data-participant-name="${participant.name}">
+  
         <i class="ri-edit-box-line"></i>
         Ver historial de pagos
-      </a>
+        </button>
 
     </article>
   `;
 }
 
 function renderParticipants() {
-  participantsGrid.innerHTML = participants
-    .map(createParticipantCard)
-    .join("");
+  participantsGrid.innerHTML = participants.map(createParticipantCard).join("");
 }
 
 renderParticipants();
@@ -286,10 +379,99 @@ searchInput.addEventListener("input", (event) => {
   const value = event.target.value.toLowerCase();
 
   const filteredParticipants = participants.filter((participant) =>
-    participant.name.toLowerCase().includes(value)
+    participant.name.toLowerCase().includes(value),
   );
 
   participantsGrid.innerHTML = filteredParticipants
     .map(createParticipantCard)
     .join("");
+});
+
+const paymentModal = document.querySelector("#paymentModal");
+const closePaymentModal = document.querySelector("#closePaymentModal");
+const modalName = document.querySelector(".payment-modal__name");
+const modalDate = document.querySelector(".payment-modal__date");
+const paymentTableRows = document.querySelector("#paymentTableRows");
+const modalGoal = document.querySelector("#modalGoal");
+const modalTotalPaid = document.querySelector("#modalTotalPaid");
+const modalPending = document.querySelector("#modalPending");
+const modalInitialStatus = document.querySelector("#modalInitialStatus");
+
+function renderPaymentsTable(payments) {
+  paymentTableRows.innerHTML = payments
+    .map((payment) => {
+      const isPaid = payment.status === "Pagado";
+
+      return `
+        <div class="payment-table__row ${isPaid ? "payment-table__row--paid" : ""}">
+          <span>${payment.month}</span>
+          <span>${formatMoney(payment.fee)}</span>
+          <span>${payment.paid > 0 ? formatMoney(payment.paid) : "$--"}</span>
+          <span class="payment-status ${
+            isPaid ? "payment-status--paid" : "payment-status--next"
+          }">
+            ${payment.status}
+          </span>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+document.addEventListener("click", (event) => {
+  const modalButton = event.target.closest("[data-participant-name]");
+
+  if (!modalButton) return;
+
+  const participantName = modalButton.dataset.participantName;
+
+  const participant = participants.find(
+    (item) => item.name === participantName,
+  );
+
+  const totalPaid = participant.payments.reduce(
+    (acc, payment) => acc + payment.paid,
+    0,
+  );
+
+  const pendingAmount = participant.goal - totalPaid;
+
+  if (!participant) return;
+
+  modalName.textContent = participant.name;
+
+  modalDate.innerHTML = `
+    <i class="ri-cake-2-line"></i>
+    ${participant.birthday}
+  `;
+
+  modalGoal.textContent = formatMoney(participant.goal);
+
+  modalTotalPaid.textContent = formatMoney(totalPaid);
+
+  modalPending.textContent = formatMoney(pendingAmount);
+
+  modalInitialStatus.innerHTML = participant.initialPercentPaid
+    ? `
+    <i class="ri-checkbox-circle-line"></i>
+    Abonado
+  `
+    : `
+    <i class="ri-error-warning-line"></i>
+    Pendiente
+  `;
+
+  modalInitialStatus.className = participant.initialPercentPaid
+    ? "pill pill--success"
+    : "pill pill--danger";
+
+  renderPaymentsTable(participant.payments || []);
+
+  paymentModal.classList.remove("is-hidden");
+  document.body.classList.add("modal-open");
+});
+
+closePaymentModal.addEventListener("click", () => {
+  paymentModal.classList.add("is-hidden");
+  document.body.classList.remove("modal-open");
 });

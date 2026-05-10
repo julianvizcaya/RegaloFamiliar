@@ -36,7 +36,7 @@
             >
               Participantes
             </a>
-            <a class="header__link" href="#">Calendario</a>
+            <a class="header__link" href="calendario.html">Calendario</a>
           </nav>
         </div>
       </header>
@@ -64,15 +64,12 @@
             />
           </div>
 
-          <section class="participants-grid" id="participantsGrid">
-
-          </section>
+          <section class="participants-grid" id="participantsGrid"></section>
           <!-- /CARDS DE PARTICIPANTES -->
 
           <!-- BOTONES DE ACCIÓN -->
 
           <section class="page-actions">
-
             <a class="page-action" href="dashboard.html">
               <span>Ver balance</span>
               <i class="ri-arrow-right-line"></i>
@@ -84,8 +81,7 @@
             </a>
           </section>
 
-           <!-- /BOTONES DE ACCIÓN -->
-            
+          <!-- /BOTONES DE ACCIÓN -->
         </div>
       </section>
 
@@ -109,6 +105,68 @@
           <i class="ri-calendar-line"></i>
         </a>
       </nav>
+
+      <!-- POP UP -->
+      <section class="payment-modal is-hidden" id="paymentModal">
+        <div class="payment-modal__overlay"></div>
+
+        <article class="payment-modal__content">
+          <header class="payment-modal__header">
+            <div>
+              <h2 class="payment-modal__name">Julián</h2>
+
+              <p class="payment-modal__date">
+                <i class="ri-cake-2-line"></i>
+                1 abril / 2027
+              </p>
+            </div>
+
+            <button
+              class="payment-modal__close"
+              type="button"
+              id="closePaymentModal"
+            >
+              <i class="ri-close-line"></i>
+            </button>
+          </header>
+
+          <section class="payment-modal__summary">
+            <article>
+              <span>Meta</span>
+              <strong class="pill pill--primary" id="modalGoal"> $0 </strong>
+            </article>
+
+            <article>
+              <span>Total aportado</span>
+              <strong class="pill pill--success" id="modalTotalPaid">
+                $0
+              </strong>
+            </article>
+
+            <article>
+              <span>Saldo pendiente</span>
+              <strong class="pill pill--danger" id="modalPending"> $0 </strong>
+            </article>
+
+            <article>
+              <span>1%</span>
+
+              <strong class="pill" id="modalInitialStatus"> Estado </strong>
+            </article>
+          </section>
+
+          <section class="payment-table">
+            <div class="payment-table__head">
+              <span>Mes</span>
+              <span>Cuota</span>
+              <span>Monto pagado</span>
+              <span>Estado</span>
+            </div>
+
+            <div id="paymentTableRows"></div>
+          </section>
+        </article>
+      </section>
     </main>
   </body>
 </html>
