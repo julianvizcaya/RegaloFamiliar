@@ -769,7 +769,7 @@ const participants = [
       {
         month: "Abril",
         fee: 125000,
-        paid: 125000,
+        paid: 150000,
         status: "Pagado",
       },
       {
