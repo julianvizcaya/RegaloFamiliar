@@ -2281,6 +2281,14 @@ p {
   }
 }
 
+.payment-modal {
+  z-index: 9999;
+}
+
+.payment-modal__content {
+  max-height: calc(100dvh - 2rem);
+}
+
 /* /POPUP */
 
 /* SCROLL */
@@ -2291,4 +2299,4 @@ body.modal-open {
   height: 100%;
 }
 
-/* SCR/OLL */
+/* SCROLL */
