@@ -59,8 +59,9 @@
     <!-- =========================================
     JS
     ========================================== -->
-    <!-- <script defer src="js/index.js"></script> -->
      <script defer src="/js/auth.js"></script>
+     <script defer src="/js/data.js"></script>
+     <script defer src="/js/dashboard.js"></script>
   </head>
 
   <body>
@@ -119,7 +120,7 @@
                     <i class="ri-group-line"></i>
                     Participantes
                   </span>
-                  <strong class="stat-card__value">22</strong>
+                  <strong class="stat-card__value" id="dashboardParticipants">22</strong>
                   <a class="stat-card__link" href="participantes.html">Ver todos →</a>
                 </article>
 
@@ -128,7 +129,7 @@
                     <i class="ri-focus-3-line"></i>
                     Meta del Grupo
                   </span>
-                  <strong class="stat-card__value">$43’800.000</strong>
+                  <strong class="stat-card__value" id="dashboardGoal">$0</strong>
                 </article>
 
                 <article class="stat-card">
@@ -136,10 +137,10 @@
                     <i class="ri-time-line"></i>
                     Total Ahorrado
                   </span>
-                  <strong class="stat-card__value stat-card__value--success"
-                    >$2’975.000</strong
-                  >
-                  <span class="stat-card__meta">Meta: $43’800.000</span>
+                  <strong class="stat-card__value stat-card__value--success" id="dashboardTotalPaid">$0</strong>
+                    
+                  
+                  <span class="stat-card__meta" id="dashboardGoalMeta">Meta: $0</span>
                 </article>
 
                 <article class="stat-card">
@@ -147,8 +148,8 @@
                     <i class="ri-line-chart-line"></i>
                     Saldo pendiente
                   </span>
-                  <strong class="stat-card__value stat-card__value--danger"
-                    >$40’825.000</strong
+                  <strong class="stat-card__value stat-card__value--danger" id="dashboardPending"
+                    >$0</strong
                   >
                 </article>
 
@@ -157,9 +158,9 @@
                     <i class="ri-gift-line"></i>
                     Regalos entregados
                   </span>
-                  <strong class="stat-card__value stat-card__value--success"
-                    >$0</strong
-                  >
+                  <strong class="stat-card__value stat-card__value--success" id="dashboardDeliveredGifts">$0</strong>
+                    
+                  
                 </article>
 
                 <article class="stat-card">
@@ -167,7 +168,7 @@
                     <i class="ri-wallet-3-line"></i>
                     Fondo disponible
                   </span>
-                  <strong class="stat-card__value">$2’975.000</strong>
+                  <strong class="stat-card__value" id="dashboardAvailable">$0</strong>
                   <span class="stat-card__meta">En caja actualmente</span>
                 </article>
               </div>
@@ -175,16 +176,16 @@
               <div class="progress-card">
                 <div class="progress-card__header">
                   <span>Progreso del ciclo</span>
-                  <strong>0,06%</strong>
+                  <strong id="dashboardProgressPercent">0%</strong>
                 </div>
 
                 <div class="progress-card__bar">
-                  <span></span>
+                  <span id="dashboardProgressBar"></span>
                 </div>
 
                 <div class="progress-card__footer">
-                  <span>Ahorrado: $2’975.000</span>
-                  <span>Meta: $43’800.000</span>
+                  <span id="dashboardProgressPaid">Ahorrado: $0</span>
+                  <span id="dashboardProgressGoal">Meta: $0</span>
                 </div>
               </div>
             </section>
