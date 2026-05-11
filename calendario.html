@@ -19,6 +19,9 @@
     />
 
     <script defer src="js/auth.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/calendario.js"></script>
+
     <link rel="stylesheet" href="css/index.css" />
   </head>
 
@@ -60,282 +63,8 @@
             </div>
 
             <!-- MESES -->
-            <section class="calendar-grid">
-              <article class="month-card">
-                <div class="month-card__header">
-                  <h2>Abril</h2>
-                  <span><i class="ri-cake-2-line"></i> 0</span>
-                </div>
-
-                <div class="month-card__empty">
-                  <i class="ri-shield-line"></i>
-                  <p>Mes de colchón</p>
-                </div>
-              </article>
-
-              <article class="month-card month-card--active">
-                <div class="month-card__header">
-                  <h2>Mayo</h2>
-                  <span class="month-card__badge">Actual</span>
-                  <span><i class="ri-cake-2-line"></i> 0</span>
-                </div>
-
-                <div class="month-card__empty">
-                  <i class="ri-shield-line"></i>
-                  <p>Mes de colchón</p>
-                </div>
-              </article>
-
-              <article class="month-card">
-                <div class="month-card__header">
-                  <h2>Junio</h2>
-                  <span><i class="ri-cake-2-line"></i> 0</span>
-                </div>
-
-                <div class="month-card__empty">
-                  <i class="ri-shield-line"></i>
-                  <p>Mes de colchón</p>
-                </div>
-              </article>
-
-              <article class="month-card">
-                <div class="month-card__header">
-                  <h2>Julio</h2>
-                  <span><i class="ri-cake-2-line"></i> 2</span>
-                </div>
-
-                <ul class="month-card__list">
-                  <li>
-                    <span><strong>11</strong> Valery</span
-                    ><span>$3’000.000</span>
-                  </li>
-                  <li>
-                    <span><strong>15</strong> Demri</span
-                    ><span>$1’500.000</span>
-                  </li>
-                </ul>
-
-                <div class="month-card__total">
-                  <span><i class="ri-gift-line"></i> Total:</span>
-                  <strong>$4’500.000</strong>
-                </div>
-              </article>
-
-              <article class="month-card">
-                <div class="month-card__header">
-                  <h2>Agosto</h2>
-                  <span><i class="ri-cake-2-line"></i> 2</span>
-                </div>
-
-                <ul class="month-card__list">
-                  <li>
-                    <span><strong>13</strong> Andrea</span
-                    ><span>$1’500.000</span>
-                  </li>
-                  <li>
-                    <span><strong>18</strong> Mathías</span
-                    ><span>$3’000.000</span>
-                  </li>
-                </ul>
-
-                <div class="month-card__total">
-                  <span><i class="ri-gift-line"></i> Total:</span>
-                  <strong>$4’500.000</strong>
-                </div>
-              </article>
-
-              <article class="month-card">
-                <div class="month-card__header">
-                  <h2>Septiembre</h2>
-                  <span><i class="ri-cake-2-line"></i> 4</span>
-                </div>
-
-                <ul class="month-card__list">
-                  <li>
-                    <span><strong>06</strong> Hugo</span><span>$1’800.000</span>
-                  </li>
-                  <li>
-                    <span><strong>09</strong> Peter</span
-                    ><span>$3’000.000</span>
-                  </li>
-                  <li>
-                    <span><strong>20</strong> Brayan</span
-                    ><span>$1’800.000</span>
-                  </li>
-                  <li>
-                    <span><strong>23</strong> Tere</span><span>$1’500.000</span>
-                  </li>
-                </ul>
-
-                <div class="month-card__total">
-                  <span><i class="ri-gift-line"></i> Total:</span>
-                  <strong>$8’100.000</strong>
-                </div>
-              </article>
-
-              <article class="month-card">
-                <div class="month-card__header">
-                  <h2>Octubre</h2>
-                  <span><i class="ri-cake-2-line"></i> 1</span>
-                </div>
-
-                <ul class="month-card__list">
-                  <li>
-                    <span><strong>13</strong> Teresita</span
-                    ><span>$1’500.000</span>
-                  </li>
-                </ul>
-
-                <div class="month-card__total">
-                  <span><i class="ri-gift-line"></i> Total:</span>
-                  <strong>$1’500.000</strong>
-                </div>
-              </article>
-
-              <article class="month-card">
-                <div class="month-card__header">
-                  <h2>Noviembre</h2>
-                  <span><i class="ri-cake-2-line"></i> 2</span>
-                </div>
-
-                <ul class="month-card__list">
-                  <li>
-                    <span><strong>08</strong> Geraldine</span
-                    ><span>$1’800.000</span>
-                  </li>
-                  <li>
-                    <span><strong>22</strong> Thomas</span
-                    ><span>$3’000.000</span>
-                  </li>
-                </ul>
-
-                <div class="month-card__total">
-                  <span><i class="ri-gift-line"></i> Total:</span>
-                  <strong>$4’800.000</strong>
-                </div>
-              </article>
-
-              <article class="month-card">
-                <div class="month-card__header">
-                  <h2>Diciembre</h2>
-                  <span><i class="ri-cake-2-line"></i> 1</span>
-                </div>
-
-                <ul class="month-card__list">
-                  <li>
-                    <span><strong>18</strong> Fabián</span
-                    ><span>$1’500.000</span>
-                  </li>
-                </ul>
-
-                <div class="month-card__total">
-                  <span><i class="ri-gift-line"></i> Total:</span>
-                  <strong>$1’500.000</strong>
-                </div>
-              </article>
-
-              <article class="month-card">
-                <div class="month-card__header">
-                  <h2>Enero / 2027</h2>
-                  <span><i class="ri-cake-2-line"></i> 2</span>
-                </div>
-
-                <ul class="month-card__list">
-                  <li>
-                    <span><strong>24</strong> Yaz</span><span>$3’000.000</span>
-                  </li>
-                  <li>
-                    <span><strong>28</strong> Inés</span><span>$1’800.000</span>
-                  </li>
-                </ul>
-
-                <div class="month-card__total">
-                  <span><i class="ri-gift-line"></i> Total:</span>
-                  <strong>$4’800.000</strong>
-                </div>
-              </article>
-
-              <article class="month-card">
-                <div class="month-card__header">
-                  <h2>Febrero / 2027</h2>
-                  <span><i class="ri-cake-2-line"></i> 1</span>
-                </div>
-
-                <ul class="month-card__list">
-                  <li>
-                    <span><strong>02</strong> Naty</span><span>$1’800.000</span>
-                  </li>
-                </ul>
-
-                <div class="month-card__total">
-                  <span><i class="ri-gift-line"></i> Total:</span>
-                  <strong>$1’800.000</strong>
-                </div>
-              </article>
-
-              <article class="month-card">
-                <div class="month-card__header">
-                  <h2>Marzo / 2027</h2>
-                  <span><i class="ri-cake-2-line"></i> 1</span>
-                </div>
-
-                <ul class="month-card__list">
-                  <li>
-                    <span><strong>28</strong> Nancy</span
-                    ><span>$1’800.000</span>
-                  </li>
-                </ul>
-
-                <div class="month-card__total">
-                  <span><i class="ri-gift-line"></i> Total:</span>
-                  <strong>$1’800.000</strong>
-                </div>
-              </article>
-
-              <article class="month-card month-card--upcoming">
-                <div class="month-card__header">
-                  <h2>Próximos / 2027</h2>
-                  <span><i class="ri-cake-2-line"></i> 6</span>
-                </div>
-
-                <ul class="month-card__list">
-                  <li>
-                    <span><strong>01 abril</strong> Julián</span
-                    ><span>$1’800.000</span>
-                  </li>
-
-                  <li>
-                    <span><strong>05 abril</strong> Óscar</span
-                    ><span>$1’800.000</span>
-                  </li>
-
-                  <li>
-                    <span><strong>24 abril</strong> Nicolás</span
-                    ><span>$1’800.000</span>
-                  </li>
-
-                  <li>
-                    <span><strong>14 mayo</strong> Marinita</span
-                    ><span>$1’500.000</span>
-                  </li>
-
-                  <li>
-                    <span><strong>25 mayo</strong> Bibian</span
-                    ><span>$1’800.000</span>
-                  </li>
-
-                  <li>
-                    <span><strong>26 mayo</strong> Nicole</span
-                    ><span>$1’800.000</span>
-                  </li>
-                </ul>
-
-                <div class="month-card__total">
-                  <span><i class="ri-gift-line"></i> Total:</span>
-                  <strong>$10’500.000</strong>
-                </div>
-              </article>
-            </section>
+            <section class="calendar-grid" id="calendarGrid"></section>
+             <!-- /MESES -->
 
             <section class="calendar-actions">
               <a class="calendar-action" href="dashboard.html">
@@ -360,14 +89,14 @@
             <i class="ri-group-line"></i>
           </a>
 
-          <a class="mobile-nav__link mobile-nav__link--active" href="calendario.html">
+          <a
+            class="mobile-nav__link mobile-nav__link--active"
+            href="calendario.html"
+          >
             <i class="ri-gift-line"></i>
           </a>
 
-          <a
-            class="mobile-nav__link"
-            href="calendario.html"
-          >
+          <a class="mobile-nav__link" href="calendario.html">
             <i class="ri-calendar-line"></i>
           </a>
         </nav>

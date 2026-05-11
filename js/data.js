@@ -1853,7 +1853,133 @@ const participants = [
 //ENTREGA DE REGALOS
 
 const deliveredGifts = [
-    /*{
+   /*{
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Demri",
+    date: "15 Julio / 2026",
+    amount: 1500000,
+  },
+
+  {
+    name: "Andrea",
+    date: "13 Agosto / 2026",
+    amount: 1500000,
+  },
+
+  {
+    name: "Mathías",
+    date: "18 Agosto / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Hugo",
+    date: "6 Septiembre / 2026",
+    amount: 1800000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
+    name: "Valery",
+    date: "11 Julio / 2026",
+    amount: 3000000,
+  },
+
+  {
     name: "Valery",
     date: "11 Julio / 2026",
     amount: 3000000,
