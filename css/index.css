@@ -256,6 +256,18 @@ p {
   font-weight: 600;
 
   color: #fca5a5;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pin__dot--active {
+  background: #0b8b56;
+  transform: scale(1.1);
+}
+
+.pin__error--visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .pin__keypad {
@@ -288,6 +300,7 @@ p {
 
 .pin__key:active {
   transform: scale(0.96);
+  background-color: #dce8ff;
 }
 
 .pin__key--delete {
