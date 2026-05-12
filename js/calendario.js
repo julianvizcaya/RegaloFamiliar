@@ -2,7 +2,7 @@ const calendarGrid = document.querySelector("#calendarGrid");
 
 const calendarMonths = [
   { name: "Abril", year: 2026, cushion: true },
-  { name: "Mayo", year: 2026, cushion: true, active: true },
+  { name: "Mayo", year: 2026, cushion: true },
   { name: "Junio", year: 2026, cushion: true },
   { name: "Julio", year: 2026 },
   { name: "Agosto", year: 2026 },
@@ -29,6 +29,15 @@ const monthNames = {
   Noviembre: 10,
   Diciembre: 11,
 };
+
+function isCurrentMonth(month) {
+  const today = new Date();
+
+  return (
+    monthNames[month.name] === today.getMonth() &&
+    month.year === today.getFullYear()
+  );
+}
 
 function getBirthdayParts(birthday) {
   const [day, month, , year] = birthday.split(" ");
@@ -119,17 +128,18 @@ function getNextCycleBirthdays() {
 
 function createMonthCard(month) {
   const birthdays = getParticipantsByMonth(month.name, month.year);
+  const isActiveMonth = isCurrentMonth(month);
   const nextBirthday = getNextBirthday();
   const total = getMonthTotal(birthdays);
   const yearLabel = month.year === 2027 ? ` / ${month.year}` : "";
 
   if (month.cushion) {
     return `
-      <article class="month-card ${month.active ? "month-card--active" : ""}">
+      <article class="month-card ${isActiveMonth ? "month-card--active" : ""}">
         <div class="month-card__header">
           <h2>${month.name}${yearLabel}</h2>
 
-          ${month.active ? `<span class="month-card__badge">Actual</span>` : ""}
+         ${isActiveMonth ? `<span class="month-card__badge">Actual</span>` : ""}
 
           <span><i class="ri-cake-2-line"></i> ${birthdays.length}</span>
         </div>
@@ -143,11 +153,11 @@ function createMonthCard(month) {
   }
 
   return `
-    <article class="month-card ${month.active ? "month-card--active" : ""}">
+   <article class="month-card ${isActiveMonth ? "month-card--active" : ""}">
       <div class="month-card__header">
         <h2>${month.name}${yearLabel}</h2>
 
-        ${month.active ? `<span class="month-card__badge">Actual</span>` : ""}
+       ${isActiveMonth ? `<span class="month-card__badge">Actual</span>` : ""}
 
         <span><i class="ri-cake-2-line"></i> ${birthdays.length}</span>
       </div>
