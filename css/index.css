@@ -1,59 +1,4 @@
-/* ============================================================
-   REGALOFAMILIAR — CSS FOUNDATION
-   ============================================================ */
-
-/* ------------------------------
-   VARIABLES GLOBALES
------------------------------- */
-:root {
-  /* Colors */
-  --color-white: #f8fafc;
-  --color-bg: #eff6ff;
-  --color-surface: #ffffff;
-
-  --color-primary: #3370d4;
-  --color-primary-light: #387deb;
-
-  --color-text: #0f172a;
-  --color-muted: #475569;
-
-  --color-success: #0b7a55;
-  --color-success-light: #13d493;
-
-  --color-danger: #ef4444;
-
-  /* Typography */
-  --font-title: "Roboto", sans-serif;
-  --font-body: "Inter", sans-serif;
-
-  --fs-hero: 4rem; /* 64px */
-  --fs-h1: 2.5rem; /* 40px */
-  --fs-h2: 2rem; /* 32px */
-  --fs-h3: 1.5rem; /* 24px */
-  --fs-title: 1.125rem; /* 18px */
-  --fs-body: 1rem; /* 16px */
-  --fs-small: 0.875rem; /* 14px */
-  --fs-label: 0.75rem; /* 12px */
-
-  /* Layout */
-  --container: 960px;
-
-  /* Radius */
-  --radius-sm: 0.5rem;
-  --radius-md: 1rem;
-  --radius-lg: 1.5rem;
-  --radius-xl: 2rem;
-  --radius-pill: 999px;
-
-  /* Shadows */
-  --shadow-card: 0 10px 24px rgba(15, 23, 42, 0.08);
-  --shadow-soft: 0 16px 40px rgba(15, 23, 42, 0.12);
-
-  /* Transitions */
-  --transition: 220ms ease;
-}
-
-/* ------------------------------
+ /* ------------------------------
    RESET MODERNO
 ------------------------------ */
 *,
@@ -108,6 +53,62 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+/* ============================================================
+   REGALOFAMILIAR — CSS FOUNDATION
+   ============================================================ */
+
+:root {
+  /* Colors */
+  --color-white: #f8fafc;
+  --color-bg: #eff6ff;
+  --color-surface: #F8FAFC;
+
+  --color-primary: #3370d4;
+  --color-primary-light: #387deb;
+
+  --color-text: #0f172a;
+  --color-muted: #475569;
+
+  --color-success: #0b7a55;
+  --color-success-light: #13d493;
+
+  --color-danger: #ef4444;
+  /* /Colors */
+
+  /* Typography */
+  --font-title: "Roboto", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --fs-hero: 3rem; /* 64px */
+  --fs-h1: 2.5rem; /* 40px */
+  --fs-h2: 2rem; /* 32px */
+  --fs-h3: 1.5rem; /* 24px */
+  --fs-title: 1.125rem; /* 18px */
+  --fs-body: 1rem; /* 16px */
+  --fs-small: 0.875rem; /* 14px */
+  --fs-label: 0.75rem; /* 12px */
+  /* /Typography */
+
+  /* Layout */
+  --container: 960px;
+
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-card: 0 10px 24px rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.02);
+  --shadow-linear: linear-gradient(180deg, var(--color-surface) 10%, var(--color-bg) 100%);
+  --shadow-box: 0 4px 0px rgba(15, 23, 42, 0.04);
+
+  /* Transitions */
+  --transition: 220ms ease;
 }
 
 /* ------------------------------
@@ -305,7 +306,7 @@ p {
 
 .pin__key--delete {
   background: rgba(255, 255, 255, 0.08);
-  color: #fca5a5;
+  color: var(--color-bg);
 }
 
 .pin__key--delete:hover {
@@ -321,7 +322,12 @@ p {
 }
 
 /* ============================================================
-   APP / DASHBOARD BASE
+   APP / PIN
+   ============================================================ */
+
+
+   /* ============================================================
+   APP DASHBOARD
    ============================================================ */
 
 .app {
@@ -351,7 +357,7 @@ p {
   font-family: var(--font-title);
   font-size: 1.5rem;
   font-weight: 900;
-  color: white;
+  color: var(--color-white);
 }
 
 .header__nav {
@@ -389,6 +395,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .home__hero {
@@ -407,33 +414,36 @@ p {
   border-radius: 50%;
   object-fit: cover;
 
-  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
+  box-shadow: var(--shadow-soft);
 }
 
 .home__title {
-  font-size: clamp(3rem, 5vw, 4rem);
-  font-weight: 900;
-  letter-spacing: -0.05em;
+  /*hacer un font-size con clamp y mis variables*/
+  font-size: clamp(var(--fs-title), 6vw, var(--fs-hero));
+  font-family: var(--font-title);
+  /* font-size: clamp(3rem, 5vw, 4rem); */
+  /* font-weight: 900; */
+  /* letter-spacing: -0.05em; */
 }
 
-.home__subtitle {
+/* .home__subtitle {
   margin-top: 0.75rem;
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-text);
-}
+} */
 
 /* =========================================================
    BALANCE CARD
 ========================================================= */
 
 .balance-card {
-  margin-top: 4rem;
-  background: var(--color-surface);
-  border-radius: 28px;
+  margin-top: 1.25rem;
+  background: white;
+  border-radius: var(--radius-lg);
   padding: 2rem;
 
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  box-shadow: var(--shadow-soft);
 }
 
 /* HEADER SUPERIOR */
@@ -445,20 +455,20 @@ p {
 
   margin-bottom: 2rem;
 
-  font-size: 0.95rem;
-  color: var(--color-muted);
+  font-size: var(--fs-body);
+  color: var(--color-text);
 }
 
 .balance-card__badge {
   background: var(--color-primary);
 
-  color: white;
+  color: var(--color-white);
 
-  padding: 0.55rem 1.4rem;
+  padding: 0.2rem 1.8rem 0.2rem 1.8rem;
 
-  border-radius: 999px;
+  border-radius: var(--radius-xl);
 
-  font-size: 0.85rem;
+  font-size: var(--fs-body);
   font-weight: 600;
 }
 
@@ -469,7 +479,7 @@ p {
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 /* CARD */
@@ -477,21 +487,21 @@ p {
 .stat-card {
   min-height: 180px;
 
-  background: linear-gradient(180deg, #f9f9f9 0%, #eff6ff 100%);
-  border-radius: 22px;
-  padding: 1.75rem;
+  background: var(--shadow-linear);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
 
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+  box-shadow: var(--shadow-box);
 
   display: grid;
   grid-template-rows: auto 1fr auto;
   align-items: start;
 
-  transition: transform 0.2s ease;
+  transition: var(--transition);
 }
 
 .stat-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 /* LABEL */
@@ -501,7 +511,7 @@ p {
   align-items: center;
   gap: 0.6rem;
 
-  font-size: 1rem;
+  font-size: var(--fs-body);
   font-weight: 700;
 
   color: var(--color-muted);
@@ -512,7 +522,7 @@ p {
 .stat-card__value {
   align-self: end;
 
-  font-size: clamp(2.2rem, 3vw, 3rem);
+  font-size: clamp(var(--fs-h3), 3vw, var(--fs-h2));
   font-weight: 900;
   line-height: 1;
 
@@ -520,8 +530,8 @@ p {
 }
 
 .stat-card__value--success {
-  color: var(--color-success-dark);
-}
+  color: var(--color-success);
+  }
 
 .stat-card__value--danger {
   color: var(--color-danger);
@@ -538,9 +548,14 @@ p {
 .stat-card__link {
   margin-top: auto;
 
-  color: var(--color-primary);
+  color: var(--color-mute);
 
   font-weight: 600;
+}
+
+.stat-card__link:hover {
+  color: var(--color-primary);
+  transition: var(--transition);
 }
 
 /* =========================================================
@@ -548,14 +563,15 @@ p {
 ========================================================= */
 
 .progress-card {
-  margin-top: 2rem;
+  margin-top: 1.25rem;
 
-  background: linear-gradient(180deg, #f9f9f9 0%, #eff6ff 100%);
+  background: var(--shadow-linear);
 
-  border-radius: 22px;
+  border-radius: var(--radius-md);
   padding: 2rem 2.5rem;
 
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+  box-shadow: var(--shadow-box);
+
 }
 
 .progress-card__header {
@@ -563,17 +579,17 @@ p {
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .progress-card__header span {
-  font-size: 1.1rem;
-  font-weight: 800;
+  font-size: var(--fs-body);
+  font-weight: 700;
   color: var(--color-success);
 }
 
 .progress-card__header strong {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(var(--fs-h3), 5vw, var(--fs-h2));
   font-weight: 900;
   line-height: 1;
   color: var(--color-text);
@@ -608,8 +624,8 @@ p {
   justify-content: space-between;
   gap: 1rem;
 
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: var(--fs-body);
+  font-weight: 400;
   color: var(--color-muted);
 }
 
@@ -647,6 +663,7 @@ p {
   /* HOME */
   .home {
     padding: 3.5rem 0 4rem;
+    
   }
 
   .home__hero {
@@ -662,7 +679,7 @@ p {
   }
 
   .home__title {
-    font-size: clamp(2.5rem, 12vw, 3.5rem);
+    font-size: clamp(var(--fs-h3), 12vw, var(--fs-h2));
     line-height: 1;
     max-width: 320px;
   }
@@ -670,8 +687,8 @@ p {
   /* BALANCE */
   .balance-card {
     width: 100%;
-    padding: 1.25rem;
-    border-radius: 1.5rem;
+    padding: 2rem;
+    border-radius: var(--radius-md);
     overflow: hidden;
   }
 
@@ -683,14 +700,15 @@ p {
   }
 
   .balance-card__header span:first-child {
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
   }
 
   .balance-card__badge {
+    display: none;
     width: 100%;
     padding: 0.8rem 1rem;
     text-align: center;
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
   }
 
   /* STATS */
@@ -709,13 +727,13 @@ p {
   }
 
   .stat-card__value {
-    font-size: clamp(2.4rem, 11vw, 3.4rem);
+    font-size: clamp(var(--fs-body), 11vw, var(--fs-tittle));
     word-break: break-word;
   }
 
   .stat-card__meta,
   .stat-card__link {
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
   }
 
   /* PROGRESS */
@@ -746,7 +764,7 @@ p {
   .header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 2;
   }
 
   .header__container {
@@ -769,6 +787,7 @@ p {
 
   .home__title {
     font-size: clamp(2.6rem, 10vw, 3.25rem);
+    
   }
 
   .balance-card__header {
