@@ -170,7 +170,7 @@ const participants = [
   {
     name: "Brayan",
     birthday: "20 Septiembre / 2026",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
@@ -186,8 +186,8 @@ const participants = [
       {
         month: "Mayo",
         fee: 150000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Junio",
@@ -674,7 +674,7 @@ const participants = [
   {
     name: "Julián",
     birthday: "1 Abril / 2027",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
@@ -690,8 +690,8 @@ const participants = [
       {
         month: "Mayo",
         fee: 150000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Junio",
@@ -1011,7 +1011,7 @@ const participants = [
   {
     name: "Naty",
     birthday: "2 Febrero / 2027",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
@@ -1027,8 +1027,8 @@ const participants = [
       {
         month: "Mayo",
         fee: 150000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Junio",
@@ -1176,7 +1176,8 @@ const participants = [
       },
     ],
   },
-  {
+
+  /*{
     name: "Nicole",
     birthday: "26 Mayo / 2027",
     status: "Pendiente",
@@ -1259,7 +1260,8 @@ const participants = [
         status: "Próximo",
       },
     ],
-  },
+  },*/
+
   {
     name: "Óscar",
     birthday: "5 Abril / 2027",
@@ -1857,131 +1859,29 @@ const deliveredGifts = [
     name: "Valery",
     date: "11 Julio / 2026",
     amount: 3000000,
-  },
+  },*/
 
-  {
+  /*{
     name: "Demri",
     date: "15 Julio / 2026",
     amount: 1500000,
-  },
+  },*/
 
-  {
+  /*{
     name: "Andrea",
     date: "13 Agosto / 2026",
     amount: 1500000,
-  },
+  },*/
 
-  {
+  /*{
     name: "Mathías",
     date: "18 Agosto / 2026",
     amount: 3000000,
-  },
+  },*/
 
-  {
+  /*{
     name: "Hugo",
     date: "6 Septiembre / 2026",
     amount: 1800000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
-  },
-
-  {
-    name: "Valery",
-    date: "11 Julio / 2026",
-    amount: 3000000,
   },*/
 ];
