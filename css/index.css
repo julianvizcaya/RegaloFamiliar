@@ -1968,11 +1968,9 @@ p {
 /* ---- /MESES ACTIVOS ----*/
 
 
-/* POPUP */
-/* =========================
-   PAYMENT MODAL
-========================= */
+/* ------------------------------------ POPUP ---------------------------------------------- */
 
+/* ---- FONDO  --- */
 .payment-modal {
   position: fixed;
   inset: 0;
@@ -1990,9 +1988,7 @@ p {
   display: none;
 }
 
-/* =========================
-   OVERLAY
-========================= */
+/*  ----- OVERLAY ---- */
 
 .payment-modal__overlay {
   position: absolute;
@@ -2003,9 +1999,7 @@ p {
   backdrop-filter: blur(4px);
 }
 
-/* =========================
-   CONTENT
-========================= */
+/* ---- CONTENT ---- */
 
 .payment-modal__content {
   position: relative;
@@ -2018,16 +2012,14 @@ p {
 
   border-radius: 3rem;
 
-  background: #f3f7fd;
+  background: var(--color-white);
 
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18); */
 
   z-index: 2;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* --- PopUp HEADER ---  */
 
 .payment-modal__header {
   display: flex;
@@ -2038,11 +2030,11 @@ p {
 
   background: var(--primary-color);
 
-  color: white;
+  color: var(--color-white);
 }
 
 .payment-modal__name {
-  font-size: 4rem;
+  font-size: var(--fs-h2);
   font-weight: 800;
 
   margin-bottom: 1rem;
@@ -2051,42 +2043,39 @@ p {
 .payment-modal__date {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: .5rem;
 
-  font-size: 1.7rem;
+  font-size: var(--fs-body);
 }
 
 .payment-modal__close {
-  width: 6rem;
-  height: 6rem;
+  width: 10rem;
+  height: 10rem;
 
   border: none;
   border-radius: 50%;
 
   background: transparent;
-  color: white;
+  color: var(--color-white);
 
   font-size: 4rem;
 
   cursor: pointer;
 
-  transition: 0.3s;
+  transition: var(--transition);
 }
 
 .payment-modal__close:hover {
   transform: rotate(90deg);
 }
 
-/* =========================
-   SUMMARY
-========================= */
+/*  --- SUMMARY ----  */
 
 .payment-modal__summary {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
   gap: 2rem;
-
   padding: 3rem 4rem;
 
   border-bottom: 1px solid #d8dee8;
@@ -2098,13 +2087,14 @@ p {
   gap: .5rem;
 
   text-align: center;
+  
 }
 
 .payment-modal__summary span {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: var(--fs-body);
+  font-weight: 600;
 
-  color: #4b5568;
+  color: var(--color-muted);
 
   text-transform: uppercase;
 }
@@ -2123,28 +2113,26 @@ p {
 
   border-radius: 999px;
 
-  font-size: 1.7rem;
+  font-size: var(--fs-body);
   font-weight: 700;
 }
 
 .pill--primary {
-  background: #3370d4;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-white);
 }
 
 .pill--success {
-  background: #0b7a55;
-  color: white;
+  background: var(--color-success);
+  color: var(--color-white);
 }
 
 .pill--danger {
-  background: #ef4444;
-  color: white;
+  background: var(--color-danger);
+  color: var(--color-white);
 }
 
-/* =========================
-   TABLE
-========================= */
+/* ------------------ TABLA ---------------- */
 
 .payment-table {
   padding: 3rem 4rem 4rem;
@@ -2158,15 +2146,17 @@ p {
   align-items: center;
 
   padding: 1.8rem 0;
+  
 }
 
 .payment-table__head {
-  font-size: 1.5rem;
+  font-size: var(--fs-body);
   font-weight: 800;
 
   color: var(--dark-color);
 
   border-bottom: 2px solid #d8dee8;
+  
 }
 
 .payment-table__row {
@@ -2175,15 +2165,14 @@ p {
   color: #4b5568;
 
   border-bottom: 1px solid #e3e8f0;
+  
 }
 
 .payment-table__row--paid {
   color: var(--dark-color);
 }
 
-/* =========================
-   STATUS
-========================= */
+/* ---- STATUS ---- */
 
 .payment-status {
   display: inline-flex;
@@ -2194,15 +2183,15 @@ p {
 
   border-radius: 999px;
 
-  font-size: 1.4rem;
+  font-size: var(--fs-body);
   font-weight: 700;
 
   width: fit-content;
 }
 
 .payment-status--paid {
-  background: #0b7a55;
-  color: white;
+  background: var(--color-success);
+  color: var(--color-white);
 }
 
 .payment-status--next {
@@ -2210,9 +2199,7 @@ p {
   color: #9ca3af;
 }
 
-/* =========================
-   PAYMENT MODAL FIX
-========================= */
+/* ---- PAYMENT MODAL FIX ---- */
 
 .payment-modal {
   align-items: center;
@@ -2229,18 +2216,18 @@ p {
 .payment-modal__header {
   padding: 2rem 2.5rem;
   background: var(--color-primary);
-  color: white;
+  color: var(--color-white);
 }
 
 .payment-modal__name {
   font-size: 2rem;
   margin-bottom: 0.4rem;
-  color: white;
+  color: var(--color-white);
 }
 
 .payment-modal__date {
   font-size: 1rem;
-  color: white;
+  color: var(--color-white);
 }
 
 .payment-modal__close {
@@ -2256,42 +2243,40 @@ p {
 }
 
 .payment-modal__summary span {
-  font-size: 0.8rem;
+  font-size: var(--fs-label);
 }
 
 .pill {
-  padding: 0.45rem 1rem;
-  font-size: 0.95rem;
+  padding: 0.2rem 1rem;
+  font-size: var(--fs-body);
 }
 
 .payment-table {
-  padding: 1.5rem 2rem 2rem;
+  padding: 1rem 4rem;
   overflow-y: auto;
   max-height: 48vh;
 }
 
 .payment-table__head,
 .payment-table__row {
-  padding: 0.8rem 0;
-  grid-template-columns: 1fr 1fr 1.2fr 1.2fr;
+  padding: .8rem;
+  grid-template-columns: 1.3fr 1.5fr 1.8fr .5fr;
 }
 
 .payment-table__head {
-  font-size: 0.85rem;
+  font-size: var(--fs-small);
 }
 
 .payment-table__row {
-  font-size: 0.95rem;
+  font-size: var(--fs-body);
 }
 
 .payment-status {
-  padding: 0.45rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.1rem 1rem;
+  font-size: var(--fs-small);
 }
 
-/* =========================
-   PAYMENT MODAL MOBILE
-========================= */
+/* ------- PAYMENT MODAL MOBILE ------- */
 
 @media (max-width: 768px) {
   .payment-modal {
@@ -2310,13 +2295,13 @@ p {
   }
 
   .payment-modal__name {
-    font-size: 1.8rem;
-    color: white;
+    font-size: var(--fs-h2);
+    color: var(--color-white);
   }
 
   .payment-modal__date {
-    font-size: 0.95rem;
-    color: white;
+    font-size: var(--fs-body);
+    color: var(--color-white);
   }
 
   .payment-modal__close {
@@ -2336,12 +2321,12 @@ p {
   }
 
   .pill {
-    font-size: 0.85rem;
+    font-size: var(--fs-small);
     padding: .2rem 0.4rem;
   }
 
   .payment-table {
-    padding: 1.5rem;
+    padding: .2rem 1.5rem;
     overflow-x: hidden;
     max-height: 42vh;
   }
@@ -2360,18 +2345,18 @@ p {
   }
 
   .payment-table__head {
-    font-size: 0.82rem;
+    font-size: var(--fs-label);
   }
 
   .payment-table__row {
-    font-size: 0.92rem;
+    font-size: var(--fs-small);
   }
 
   .payment-status {
     width: 100%;
     justify-content: center;
     padding: 0.2rem 0.4rem;
-    font-size: 0.8rem;
+    font-size: var(--fs-label);
   }
 }
 
@@ -2383,7 +2368,7 @@ body.modal-open .mobile-nav {
   display: none;
 }
 
-/* /POPUP */
+/* --------------------------  /POPUP -----------------------------  */
 
 /* SCROLL */
 
@@ -2410,15 +2395,15 @@ body.modal-open {
 
   border-radius: 999px;
 
-  background: var(--primary-color);
-  color: white;
+  background: var(--shadow-linear);
+  color: var(--color-white);
 
   font-size: 1rem;
   font-weight: 700;
 }
 /* /PROXIMOS CUMPLEAÑOS 2027 */
 
-/* INFORMACION.HTML */
+/* -----------------------  INFORMACION.HTML --------------------------------  */
 .info {
   padding: 4rem 0 12rem;
 }
