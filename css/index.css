@@ -1130,7 +1130,7 @@ p {
 }
 /* --- RESPONSIVE BTNS INFERIORES DESKTOP --- */
 
-/* ---- PARTICIPANTES PAGE ---- */
+/* ---------------------------------------- PARTICIPANTES PAGE ---------------------------------------------- */
 .participants {
   padding: 4rem 6rem;
   background: var(--color-bg);
@@ -1224,10 +1224,10 @@ p {
   justify-content: center;
   gap: 0.5rem;
 
-  padding: 0.55rem 1.2rem;
+  padding: .3rem 1rem;
   border-radius: 999px;
 
-  font-size: 1rem;
+  font-size: var(--fs-small);
   font-weight: 800;
 
   white-space: nowrap;
@@ -1235,8 +1235,8 @@ p {
 }
 
 .participant-card__status--pending {
-  background: #ff4747;
-  color: white;
+  background: var(--color-danger);
+  color: var(--color-white);
 }
 /*  --- /STATUS ---- */
 
@@ -1270,7 +1270,7 @@ p {
 }
 
 .text-danger {
-  color: #ff4747 !important;
+  color: var(--color-danger) !important;
 }
 
 /* --- PROGRESS ---*/
@@ -1963,7 +1963,7 @@ p {
 
 .month-card--active .month-card__badge {
   background: var(--color-success);
-  color: white;
+  color: var(--color-white);
 }
 /* ---- /MESES ACTIVOS ----*/
 
