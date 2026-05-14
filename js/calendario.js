@@ -129,7 +129,7 @@ function getNextCycleBirthdays() {
 function createMonthCard(month) {
   const birthdays = getParticipantsByMonth(month.name, month.year);
   const isActiveMonth = isCurrentMonth(month);
-  const nextBirthday = getNextBirthday();
+  //const nextBirthday = getNextBirthday();
   const total = getMonthTotal(birthdays);
   const yearLabel = month.year === 2027 ? ` / ${month.year}` : "";
 
@@ -167,8 +167,10 @@ function createMonthCard(month) {
     .map((participant) => {
       const birthday = getBirthdayParts(participant.birthday);
 
-      const isNextBirthday =
-        nextBirthday && participant.name === nextBirthday.name;
+      //const isNextBirthday =
+        //nextBirthday && participant.name === nextBirthday.name;
+
+        const isNextBirthday = false;
 
       return `
         <li class="${isNextBirthday ? "month-card__item--next" : ""}">
