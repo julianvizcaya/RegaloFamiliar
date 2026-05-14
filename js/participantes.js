@@ -198,3 +198,14 @@ closePaymentModal.addEventListener("click", () => {
   paymentModal.classList.add("is-hidden");
   document.body.classList.remove("modal-open");
 });
+
+paymentModal.addEventListener("click", (event) => {
+  const clickedOutsideModal = event.target.classList.contains(
+    "payment-modal__overlay"
+  );
+
+  if (!clickedOutsideModal) return;
+
+  paymentModal.classList.add("is-hidden");
+  document.body.classList.remove("modal-open");
+});

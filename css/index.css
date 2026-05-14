@@ -398,9 +398,9 @@ p {
 }
 
 .home__hero {
-  /*quiero que este quede strecth y justificarlo a la izquierda*/
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100%;
   align-items: center;
   gap: 1.75rem;
 
@@ -422,7 +422,7 @@ p {
   /*hacer un font-size con clamp y mis variables*/
   font-size: clamp(2rem, 6vw, 3rem);
   font-family: var(--font-title);
-  /* font-weight: 900; */
+  font-weight: 800;
   /* letter-spacing: -0.05em; */
 }
 
@@ -1160,6 +1160,7 @@ p {
   font-size: clamp(2rem, 6vw, 3rem);
   font-family: var(--font-title);
   color: var(--color-text);
+  font-weight: 800;
 }
 
 /* --- GRID/ Fondo --- */
@@ -1664,6 +1665,7 @@ p {
   font-size: clamp(2rem, 6vw, 3rem);
   font-family: var(--font-title);
   color: var(--color-text);
+  font-weight: 800;
 }
 
 .calendar__subtitle {
@@ -2824,3 +2826,14 @@ body.modal-open {
     width: 100%;
   }
 } */
+
+.header__brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 12rem;
+  height: auto;
+  display: block;
+}
