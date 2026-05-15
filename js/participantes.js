@@ -125,7 +125,7 @@ function closePaymentModalHandler() {
   paymentModal.classList.add("is-hidden");
 
   document.body.classList.remove("modal-open");
-  document.documentElement.classList.remove("modal-open");
+  /*document.documentElement.classList.remove("modal-open");*/
 }
 
 function renderPaymentsTable(payments) {
@@ -196,16 +196,23 @@ document.addEventListener("click", (event) => {
     ? "pill pill--success"
     : "pill pill--danger";
 
-  renderPaymentsTable(participant.payments || []);
+    renderPaymentsTable(participant.payments || []);
+
+paymentModal.classList.remove("is-hidden");
+document.body.classList.add("modal-open");
+});
+
+  /*renderPaymentsTable(participant.payments || []);
+
 
 paymentModal.classList.remove("is-hidden");
 
-document.body.classList.add("modal-open");
-document.documentElement.classList.add("modal-open");
+document.body.classList.add("modal-open");*/
+/*document.documentElement.classList.add("modal-open");*/
 
 /*paymentModal.classList.remove("is-hidden");
-document.body.classList.add("modal-open");*/
-}); 
+document.body.classList.add("modal-open");
+}); */
 
 closePaymentModal.addEventListener("click", closePaymentModalHandler);
 
