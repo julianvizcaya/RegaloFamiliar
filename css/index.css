@@ -2375,10 +2375,10 @@ body.modal-open .mobile-nav {
 
 /* SCROLL */
 
-
 body.modal-open {
   overflow: hidden;
-  height: 100vh;
+  position: fixed;
+  width: 100%;
 }
 
 /* SCROLL */
