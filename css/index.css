@@ -2377,7 +2377,6 @@ body.modal-open .mobile-nav {
 
 body.modal-open {
   overflow: hidden;
-  position: fixed;
   width: 100%;
 }
 
