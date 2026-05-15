@@ -119,13 +119,27 @@ const modalGoal = document.querySelector("#modalGoal");
 const modalTotalPaid = document.querySelector("#modalTotalPaid");
 const modalPending = document.querySelector("#modalPending");
 const modalInitialStatus = document.querySelector("#modalInitialStatus");
+let scrollPosition = 0;
 
 function closePaymentModalHandler() {
   paymentModal.classList.add("is-hidden");
 
   document.body.classList.remove("modal-open");
   document.documentElement.classList.remove("modal-open");
+
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.width = "";
+
+  window.scrollTo(0, scrollPosition);
 }
+
+/*function closePaymentModalHandler() {
+  paymentModal.classList.add("is-hidden");
+
+  document.body.classList.remove("modal-open");
+  document.documentElement.classList.remove("modal-open");
+}*/
 
 function renderPaymentsTable(payments) {
   paymentTableRows.innerHTML = payments
@@ -197,9 +211,20 @@ document.addEventListener("click", (event) => {
 
   renderPaymentsTable(participant.payments || []);
 
-  paymentModal.classList.remove("is-hidden");
-  document.body.classList.add("modal-open");
-});
+scrollPosition = window.scrollY;
+
+paymentModal.classList.remove("is-hidden");
+
+document.body.classList.add("modal-open");
+document.documentElement.classList.add("modal-open");
+
+document.body.style.position = "fixed";
+document.body.style.top = `-${scrollPosition}px`;
+document.body.style.width = "100%";
+
+/*paymentModal.classList.remove("is-hidden");
+document.body.classList.add("modal-open");*/
+}); 
 
 closePaymentModal.addEventListener("click", closePaymentModalHandler);
 
