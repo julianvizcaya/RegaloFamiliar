@@ -130,8 +130,6 @@ function closePaymentModalHandler() {
   document.body.style.position = "";
   document.body.style.top = "";
   document.body.style.width = "";
-
-  window.scrollTo(0, scrollPosition);
 }
 
 /*function closePaymentModalHandler() {
