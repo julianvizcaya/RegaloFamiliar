@@ -199,7 +199,12 @@ closePaymentModal.addEventListener("click", () => {
   document.body.classList.remove("modal-open");
 });
 
-paymentModal.addEventListener("click", (event) => {
+closePaymentModal.addEventListener("click", () => {
+  paymentModal.classList.add("is-hidden");
+  document.body.classList.remove("modal-open");
+});
+
+/*paymentModal.addEventListener("click", (event) => {
   const clickedOutsideModal = event.target.classList.contains(
     "payment-modal__overlay"
   );
@@ -208,4 +213,4 @@ paymentModal.addEventListener("click", (event) => {
 
   paymentModal.classList.add("is-hidden");
   document.body.classList.remove("modal-open");
-});
+});*/

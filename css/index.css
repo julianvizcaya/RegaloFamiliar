@@ -2375,7 +2375,6 @@ body.modal-open .mobile-nav {
 
 /* SCROLL */
 
-html.modal-open,
 body.modal-open {
   overflow: hidden;
   height: 100%;
