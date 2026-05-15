@@ -120,14 +120,6 @@ const modalTotalPaid = document.querySelector("#modalTotalPaid");
 const modalPending = document.querySelector("#modalPending");
 const modalInitialStatus = document.querySelector("#modalInitialStatus");
 
-
-function closePaymentModalHandler() {
-  paymentModal.classList.add("is-hidden");
-
-  document.body.classList.remove("modal-open");
-  /*document.documentElement.classList.remove("modal-open");*/
-}
-
 function renderPaymentsTable(payments) {
   paymentTableRows.innerHTML = payments
     .map((payment) => {
@@ -196,25 +188,16 @@ document.addEventListener("click", (event) => {
     ? "pill pill--success"
     : "pill pill--danger";
 
-    renderPaymentsTable(participant.payments || []);
+  renderPaymentsTable(participant.payments || []);
 
-paymentModal.classList.remove("is-hidden");
-document.body.classList.add("modal-open");
+  paymentModal.classList.remove("is-hidden");
+  document.body.classList.add("modal-open");
 });
 
-  /*renderPaymentsTable(participant.payments || []);
-
-
-paymentModal.classList.remove("is-hidden");
-
-document.body.classList.add("modal-open");*/
-/*document.documentElement.classList.add("modal-open");*/
-
-/*paymentModal.classList.remove("is-hidden");
-document.body.classList.add("modal-open");
-}); */
-
-closePaymentModal.addEventListener("click", closePaymentModalHandler);
+closePaymentModal.addEventListener("click", () => {
+  paymentModal.classList.add("is-hidden");
+  document.body.classList.remove("modal-open");
+});
 
 paymentModal.addEventListener("click", (event) => {
   const clickedOutsideModal = event.target.classList.contains(
@@ -223,5 +206,6 @@ paymentModal.addEventListener("click", (event) => {
 
   if (!clickedOutsideModal) return;
 
-  closePaymentModalHandler();
+  paymentModal.classList.add("is-hidden");
+  document.body.classList.remove("modal-open");
 });

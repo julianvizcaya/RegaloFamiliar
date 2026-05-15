@@ -2371,16 +2371,6 @@ body.modal-open .mobile-nav {
   display: none;
 }
 
-body.modal-open {
-  overflow: hidden;
-}
-
-.payment-modal,
-.payment-modal__content,
-.payment-table {
-  overscroll-behavior: contain;
-}
-
 /* --------------------------  /POPUP -----------------------------  */
 
 /* SCROLL */
@@ -2389,18 +2379,6 @@ html.modal-open,
 body.modal-open {
   overflow: hidden;
   height: 100%;
-}
-
-.payment-modal {
-  overscroll-behavior: contain;
-}
-
-.payment-modal__content {
-  overscroll-behavior: contain;
-}
-
-.payment-table {
-  overscroll-behavior: contain;
 }
 
 /* SCROLL */
