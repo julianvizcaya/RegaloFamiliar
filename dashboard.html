@@ -33,20 +33,11 @@
 
             <nav class="header__nav" aria-label="Navegación principal">
               <a
-                class="header__link header__link--active"
-                href="dashboard.html"
-                data-page="home"
-              >
-                Inicio
-              </a>
+                class="header__link header__link--active" href="dashboard.html" data-page="home">Inicio</a>
 
-              <a class="header__link" href="participantes.html" data-page="participantes">
-                Participantes
-              </a>
+              <a class="header__link" href="participantes.html" data-page="participantes">Participantes</a>
 
-              <a class="header__link" href="calendario.html" data-page="calendar">
-                Calendario
-              </a>
+              <a class="header__link" href="calendario.html" data-page="calendar">Calendario</a>
 
               <!-- <a class="header__link" href="informacion.html">Información</a> -->
             </nav>
@@ -56,11 +47,7 @@
         <section class="home" data-section="home">
           <div class="container home__container">
             <div class="home__hero">
-              <img
-                class="home__logo"
-                src="assets/logo.png"
-                alt="img"
-              />
+              <img class="home__logo" src="assets/logo.png" alt="img"/>
 
               <div>
                 <h1 class="home__title">Balance General</h1>
@@ -71,65 +58,41 @@
             <section class="balance-card">
               <div class="balance-card__header">
                 <span>Última actualización: 14 mayo 2026</span>
-                <span class="balance-card__badge"
-                  >Ciclo Abril 2026 a Marzo 2027</span
-                >
+                <span class="balance-card__badge">Ciclo Abril 2026 a Marzo 2027</span>
               </div>
 
               <div class="stats-grid">
                 <article class="stat-card">
-                  <span class="stat-card__label">
-                    <i class="ri-group-line"></i>
-                    Participantes
-                  </span>
+                  <span class="stat-card__label"><i class="ri-group-line"></i>Participantes</span>
+
                   <strong class="stat-card__value" id="dashboardParticipants">22</strong>
                   <a class="stat-card__link" href="participantes.html">Ver todos →</a>
                 </article>
 
                 <article class="stat-card">
-                  <span class="stat-card__label">
-                    <i class="ri-focus-3-line"></i>
-                    Meta del Grupo
-                  </span>
+                  <span class="stat-card__label"><i class="ri-focus-3-line"></i>Meta del Grupo</span>
                   <strong class="stat-card__value" id="dashboardGoal">$0</strong>
                 </article>
 
                 <article class="stat-card">
-                  <span class="stat-card__label">
-                    <i class="ri-time-line"></i>
-                    Total Ahorrado
-                  </span>
+                  <span class="stat-card__label"><i class="ri-time-line"></i>Total Ahorrado</span>
                   <strong class="stat-card__value stat-card__value--success" id="dashboardTotalPaid">$0</strong>
                     
-                  
                   <span class="stat-card__meta" id="dashboardGoalMeta">Meta: $0</span>
                 </article>
 
                 <article class="stat-card">
-                  <span class="stat-card__label">
-                    <i class="ri-line-chart-line"></i>
-                    Saldo pendiente
-                  </span>
-                  <strong class="stat-card__value stat-card__value--danger" id="dashboardPending"
-                    >$0</strong
-                  >
+                  <span class="stat-card__label"><i class="ri-line-chart-line"></i>Saldo pendiente</span>
+                  <strong class="stat-card__value stat-card__value--danger" id="dashboardPending">$0</strong>
                 </article>
 
                 <article class="stat-card">
-                  <span class="stat-card__label">
-                    <i class="ri-gift-line"></i>
-                    Regalos entregados
-                  </span>
+                  <span class="stat-card__label"><i class="ri-gift-line"></i>Regalos entregados</span>
                   <strong class="stat-card__value stat-card__value--success" id="dashboardDeliveredGifts">$0</strong>
-                    
-                  
                 </article>
 
                 <article class="stat-card">
-                  <span class="stat-card__label">
-                    <i class="ri-wallet-3-line"></i>
-                    Fondo disponible
-                  </span>
+                  <span class="stat-card__label"><i class="ri-wallet-3-line"></i>Fondo disponible</span>
                   <strong class="stat-card__value" id="dashboardAvailable">$0</strong>
                   <span class="stat-card__meta">En caja actualmente</span>
                 </article>
@@ -154,49 +117,33 @@
 
             <section class="home-lists">
 
-  <!-- =========================
-       PRÓXIMOS CUMPLEAÑOS
-  ========================== -->
+  <!----- PRÓXIMOS CUMPLEAÑOS ----->
  <article class="home-list">
-
-  <h2 class="home-list__title">
-    <i class="ri-calendar-event-line"></i>
-    Próximos Cumpleaños
-  </h2>
-
+  <h2 class="home-list__title"><i class="ri-calendar-event-line"></i>Próximos Cumpleaños</h2>
   <div class="home-list__card" id="upcomingBirthdays"></div>
-
 </article>
 
-  <!-- =========================
-       REGALOS ENTREGADOS
-  ========================== -->
+  <!----- REGALOS ENTREGADOS ------>
   <article class="home-list">
-  <h2 class="home-list__title">
-    <i class="ri-gift-line"></i>
-    Últimos Entregados
-  </h2>
-
+  <h2 class="home-list__title"><i class="ri-gift-line"></i>Últimos Entregados</h2>
   <div class="home-list__card" id="deliveredGiftsList"></div>
 </article>
 
-<!-- ---  / REGALOS ENTREGADOS ----->
-
+<!----- REGALOS ENTREGADOS ------>
   <section class="home-actions">
-  <a class="home-action" href="participantes.html" data-page="participants">
-    <span>Ver participantes</span>
-    <i class="ri-arrow-right-line"></i>
-  </a>
+    <a class="home-action" href="participantes.html" data-page="participants">
+      <span>Ver participantes</span>
+      <i class="ri-arrow-right-line"></i>
+    </a>
 
-  <a class="home-action" href="calendario.html" data-page="calendar">
-    <span>Calendario</span>
-    <i class="ri-arrow-right-line"></i>
-  </a>
-</section>
+    <a class="home-action" href="calendario.html" data-page="calendar">
+      <span>Calendario</span><i class="ri-arrow-right-line"></i>
+    </a>
+  </section>
 
 <!-- NAV MÓVIL -->
 </section>
-          </div>
+</div>
 
         <nav class="mobile-nav" aria-label="Navegación móvil">
           <a
@@ -209,12 +156,6 @@
           <!-- <a class="mobile-nav__link" href="informacion.html"><i class="ri-information-line"></i></a> -->
         </nav>
       </section>
-    </main>
-
-    <!-- =====================================================
-     HASTA ACA VOY ACTUALIZANDO
-     ===================================================== -->
-
-    
+    </main>    
   </body>
 </html>

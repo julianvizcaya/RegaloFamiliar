@@ -2381,6 +2381,18 @@ body.modal-open {
   height: 100%;
 }
 
+.payment-modal {
+  overscroll-behavior: contain;
+}
+
+.payment-modal__content {
+  overscroll-behavior: contain;
+}
+
+.payment-table {
+  overscroll-behavior: contain;
+}
+
 /* SCROLL */
 
 /* PROXIMOS CUMPLEAÑOS 2027 */
