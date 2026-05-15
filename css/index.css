@@ -2374,11 +2374,14 @@ body.modal-open .mobile-nav {
 /* --------------------------  /POPUP -----------------------------  */
 
 /* SCROLL */
-
 body.modal-open {
   overflow: hidden;
-  height: 100%;
 }
+
+/* body.modal-open {
+  overflow: hidden;
+  height: 100%;
+} */
 
 /* SCROLL */
 

@@ -202,6 +202,7 @@ closePaymentModal.addEventListener("click", () => {
 closePaymentModal.addEventListener("click", () => {
   paymentModal.classList.add("is-hidden");
   document.body.classList.remove("modal-open");
+  document.documentElement.classList.remove("modal-open");
 });
 
 /*paymentModal.addEventListener("click", (event) => {
