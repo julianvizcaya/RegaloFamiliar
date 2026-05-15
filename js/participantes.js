@@ -120,6 +120,13 @@ const modalTotalPaid = document.querySelector("#modalTotalPaid");
 const modalPending = document.querySelector("#modalPending");
 const modalInitialStatus = document.querySelector("#modalInitialStatus");
 
+function closePaymentModalHandler() {
+  paymentModal.classList.add("is-hidden");
+
+  document.body.classList.remove("modal-open");
+  document.documentElement.classList.remove("modal-open");
+}
+
 function renderPaymentsTable(payments) {
   paymentTableRows.innerHTML = payments
     .map((payment) => {
@@ -194,10 +201,7 @@ document.addEventListener("click", (event) => {
   document.body.classList.add("modal-open");
 });
 
-closePaymentModal.addEventListener("click", () => {
-  paymentModal.classList.add("is-hidden");
-  document.body.classList.remove("modal-open");
-});
+closePaymentModal.addEventListener("click", closePaymentModalHandler);
 
 paymentModal.addEventListener("click", (event) => {
   const clickedOutsideModal = event.target.classList.contains(
@@ -206,6 +210,5 @@ paymentModal.addEventListener("click", (event) => {
 
   if (!clickedOutsideModal) return;
 
-  paymentModal.classList.add("is-hidden");
-  document.body.classList.remove("modal-open");
+  closePaymentModalHandler();
 });
