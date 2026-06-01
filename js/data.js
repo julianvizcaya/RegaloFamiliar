@@ -1769,7 +1769,7 @@ const participants = [
   {
     name: "Yaz",
     birthday: "24 Enero / 2027",
-    status: "Al día",
+    status: "Pendiente",
     goal: 3000000,
     monthlyFee: 250000,
     initialPercentPaid: true,
