@@ -759,7 +759,7 @@ const participants = [
   {
     name: "Marinita",
     birthday: "14 Mayo / 2027",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1500000,
     monthlyFee: 125000,
     initialPercentPaid: true,
@@ -775,14 +775,14 @@ const participants = [
       {
         month: "Mayo",
         fee: 125000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Junio",
         fee: 125000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Julio",
