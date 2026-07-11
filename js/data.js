@@ -170,7 +170,7 @@ const participants = [
   {
     name: "Brayan",
     birthday: "20 Septiembre / 2026",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
@@ -198,8 +198,8 @@ const participants = [
       {
         month: "Julio",
         fee: 150000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Agosto",
@@ -674,7 +674,7 @@ const participants = [
   {
     name: "Julián",
     birthday: "1 Abril / 2027",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
@@ -702,8 +702,8 @@ const participants = [
       {
         month: "Julio",
         fee: 150000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Agosto",
@@ -1011,7 +1011,7 @@ const participants = [
   {
     name: "Naty",
     birthday: "2 Febrero / 2027",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
@@ -1039,8 +1039,8 @@ const participants = [
       {
         month: "Julio",
         fee: 150000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Agosto",
@@ -1855,11 +1855,11 @@ const participants = [
 //ENTREGA DE REGALOS
 
 const deliveredGifts = [
-   /*{
+   {
     name: "Valery",
     date: "11 Julio / 2026",
     amount: 3000000,
-  },*/
+  },
 
   /*{
     name: "Demri",
