@@ -1861,11 +1861,11 @@ const deliveredGifts = [
     amount: 3000000,
   },
 
-  /*{
+  {
     name: "Demri",
     date: "15 Julio / 2026",
     amount: 1500000,
-  },*/
+  },
 
   /*{
     name: "Andrea",
