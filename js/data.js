@@ -338,7 +338,7 @@ const participants = [
   {
     name: "Fabián",
     birthday: "18 Diciembre / 2026",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1500000,
     monthlyFee: 125000,
     initialPercentPaid: true,
@@ -366,14 +366,14 @@ const participants = [
       {
         month: "Julio",
         fee: 125000,
-        paid: 0,
-        status: "Próximo",
+        paid: 125000,
+        status: "Pagado",
       },
       {
         month: "Agosto",
         fee: 125000,
-        paid: 0,
-        status: "Próximo",
+        paid: 125000,
+        status: "Pagado",
       },
       {
         month: "Septiembre",
@@ -843,7 +843,7 @@ const participants = [
   {
     name: "Mathías",
     birthday: "18 Agosto / 2026",
-    status: "Pendiente",
+    status: "Al día",
     goal: 3000000,
     monthlyFee: 250000,
     initialPercentPaid: true,
@@ -871,14 +871,14 @@ const participants = [
       {
         month: "Julio",
         fee: 250000,
-        paid: 0,
-        status: "Próximo",
+        paid: 250000,
+        status: "Pagado",
       },
       {
         month: "Agosto",
         fee: 250000,
-        paid: 0,
-        status: "Próximo",
+        paid: 250000,
+        status: "Pagado",
       },
       {
         month: "Septiembre",
@@ -1601,7 +1601,7 @@ const participants = [
   {
     name: "Thomas",
     birthday: "22 Noviembre / 2026",
-    status: "Pendiente",
+    status: "Al día",
     goal: 3000000,
     monthlyFee: 250000,
     initialPercentPaid: true,
@@ -1629,14 +1629,14 @@ const participants = [
       {
         month: "Julio",
         fee: 250000,
-        paid: 0,
-        status: "Próximo",
+        paid: 250000,
+        status: "Pagado",
       },
       {
         month: "Agosto",
         fee: 250000,
-        paid: 0,
-        status: "Próximo",
+        paid: 250000,
+        status: "Pagado",
       },
       {
         month: "Septiembre",
