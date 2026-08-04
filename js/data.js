@@ -30,8 +30,8 @@ const participants = [
       {
         month: "Julio",
         fee: 125000,
-        paid: 0,
-        status: "Próximo",
+        paid: 125000,
+        status: "Pagado",
       },
       {
         month: "Agosto",
@@ -282,8 +282,8 @@ const participants = [
       {
         month: "Julio",
         fee: 125000,
-        paid: 76000,
-        status: "Abonado",
+        paid: 151000,
+        status: "Pagado",
       },
       {
         month: "Agosto",
