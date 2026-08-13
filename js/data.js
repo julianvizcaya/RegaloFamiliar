@@ -170,7 +170,7 @@ const participants = [
   {
     name: "Brayan",
     birthday: "20 Septiembre / 2026",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
@@ -204,8 +204,8 @@ const participants = [
       {
         month: "Agosto",
         fee: 150000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Septiembre",
@@ -288,8 +288,8 @@ const participants = [
       {
         month: "Agosto",
         fee: 125000,
-        paid: 0,
-        status: "Próximo",
+        paid: 63000,
+        status: "Abonado",
       },
       {
         month: "Septiembre",
@@ -674,7 +674,7 @@ const participants = [
   {
     name: "Julián",
     birthday: "1 Abril / 2027",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
@@ -708,8 +708,8 @@ const participants = [
       {
         month: "Agosto",
         fee: 150000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Septiembre",
@@ -787,8 +787,8 @@ const participants = [
       {
         month: "Julio",
         fee: 125000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Agosto",
@@ -1011,7 +1011,7 @@ const participants = [
   {
     name: "Naty",
     birthday: "2 Febrero / 2027",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
@@ -1045,8 +1045,8 @@ const participants = [
       {
         month: "Agosto",
         fee: 150000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Septiembre",
@@ -1176,91 +1176,6 @@ const participants = [
       },
     ],
   },
-
-  /*{
-    name: "Nicole",
-    birthday: "26 Mayo / 2027",
-    status: "Pendiente",
-    goal: 1800000,
-    monthlyFee: 150000,
-    initialPercentPaid: false,
-    progress: 0,
-
-    payments: [
-      {
-        month: "Abril",
-        fee: 150000,
-        paid: 0,
-        status: "Próximo",
-      },
-      {
-        month: "Mayo",
-        fee: 150000,
-        paid: 0,
-        status: "Próximo",
-      },
-      {
-        month: "Junio",
-        fee: 150000,
-        paid: 0,
-        status: "Próximo",
-      },
-      {
-        month: "Julio",
-        fee: 150000,
-        paid: 0,
-        status: "Próximo",
-      },
-      {
-        month: "Agosto",
-        fee: 150000,
-        paid: 0,
-        status: "Próximo",
-      },
-      {
-        month: "Septiembre",
-        fee: 150000,
-        paid: 0,
-        status: "Próximo",
-      },
-      {
-        month: "Octubre",
-        fee: 150000,
-        paid: 0,
-        status: "Próximo",
-      },
-      {
-        month: "Noviembre",
-        fee: 150000,
-        paid: 0,
-        status: "Próximo",
-      },
-      {
-        month: "Diciembre",
-        fee: 150000,
-        paid: 0,
-        status: "Próximo",
-      },
-      {
-        month: "Enero",
-        fee: 150000,
-        paid: 0,
-        status: "Próximo",
-      },
-      {
-        month: "Febrero",
-        fee: 150000,
-        paid: 0,
-        status: "Próximo",
-      },
-      {
-        month: "Marzo",
-        fee: 150000,
-        paid: 0,
-        status: "Próximo",
-      },
-    ],
-  },*/
 
   {
     name: "Óscar",
@@ -1867,11 +1782,11 @@ const deliveredGifts = [
     amount: 1500000,
   },
 
-  /*{
+  {
     name: "Andrea",
     date: "13 Agosto / 2026",
     amount: 1500000,
-  },*/
+  },
 
   /*{
     name: "Mathías",
