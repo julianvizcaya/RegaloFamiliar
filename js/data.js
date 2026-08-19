@@ -1264,7 +1264,7 @@ const participants = [
   {
     name: "Peter",
     birthday: "9 Septiembre / 2026",
-    status: "Pendiente",
+    status: "Al día",
     goal: 3000000,
     monthlyFee: 250000,
     initialPercentPaid: true,
@@ -1298,8 +1298,8 @@ const participants = [
       {
         month: "Agosto",
         fee: 250000,
-        paid: 0,
-        status: "Próximo",
+        paid: 250000,
+        status: "Pagado",
       },
       {
         month: "Septiembre",
@@ -1684,7 +1684,7 @@ const participants = [
   {
     name: "Yaz",
     birthday: "24 Enero / 2027",
-    status: "Pendiente",
+    status: "Al día",
     goal: 3000000,
     monthlyFee: 250000,
     initialPercentPaid: true,
@@ -1718,8 +1718,8 @@ const participants = [
       {
         month: "Agosto",
         fee: 250000,
-        paid: 0,
-        status: "Próximo",
+        paid: 250000,
+        status: "Pagado",
       },
       {
         month: "Septiembre",
@@ -1788,15 +1788,81 @@ const deliveredGifts = [
     amount: 1500000,
   },
 
-  /*{
+  {
     name: "Mathías",
     date: "18 Agosto / 2026",
     amount: 3000000,
-  },*/
+  },
 
   /*{
     name: "Hugo",
     date: "6 Septiembre / 2026",
+    amount: 1800000,
+  },*/
+
+  /*{
+    name: "Peter",
+    date: "9 Septiembre / 2026",
+    amount: 3000000,
+  },*/
+
+  /*{
+    name: "Brayan",
+    date: "20 Septiembre / 2026",
+    amount: 1800000,
+  },*/
+
+  /*{
+    name: "Tere",
+    date: "23 Septiembre / 2026",
+    amount: 1500000,
+  },*/
+
+  /*{
+    name: "Teresita",
+    date: "13 Octubre / 2026",
+    amount: 1500000,
+  },*/
+
+  /*{
+    name: "Geraldine",
+    date: "8 Noviembre / 2026",
+    amount: 1800000,
+  },*/
+
+  /*{
+    name: "Thomas",
+    date: "22 Noviembre / 2026",
+    amount: 3000000,
+  },*/
+
+  /*{
+    name: "Fabian",
+    date: "18 Diciembre / 2026",
+    amount: 1500000,
+  },*/
+
+  /*{
+    name: "Yaz",
+    date: "24 Enero / 2026",
+    amount: 3000000,
+  },*/
+
+   /*{
+    name: "Inés",
+    date: "28 Enero / 2026",
+    amount: 1800000,
+  },*/
+
+  /*{
+    name: "Naty",
+    date: "2 Febrero / 2026",
+    amount: 1800000,
+  },*/
+
+   /*{
+    name: "Nancy",
+    date: "28 Marzo / 2026",
     amount: 1800000,
   },*/
 ];
