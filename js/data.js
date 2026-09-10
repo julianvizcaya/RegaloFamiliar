@@ -170,7 +170,7 @@ const participants = [
   {
     name: "Brayan",
     birthday: "20 Septiembre / 2026",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
@@ -210,8 +210,8 @@ const participants = [
       {
         month: "Septiembre",
         fee: 150000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Octubre",
@@ -674,7 +674,7 @@ const participants = [
   {
     name: "Julián",
     birthday: "1 Abril / 2027",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
@@ -714,8 +714,8 @@ const participants = [
       {
         month: "Septiembre",
         fee: 150000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Octubre",
@@ -759,7 +759,7 @@ const participants = [
   {
     name: "Marinita",
     birthday: "14 Mayo / 2027",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1500000,
     monthlyFee: 125000,
     initialPercentPaid: true,
@@ -793,14 +793,14 @@ const participants = [
       {
         month: "Agosto",
         fee: 125000,
-        paid: 0,
-        status: "Vencido",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Septiembre",
         fee: 125000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Octubre",
@@ -1011,7 +1011,7 @@ const participants = [
   {
     name: "Naty",
     birthday: "2 Febrero / 2027",
-    status: "Pendiente",
+    status: "Al día",
     goal: 1800000,
     monthlyFee: 150000,
     initialPercentPaid: true,
@@ -1051,8 +1051,8 @@ const participants = [
       {
         month: "Septiembre",
         fee: 150000,
-        paid: 0,
-        status: "Próximo",
+        paid: 150000,
+        status: "Pagado",
       },
       {
         month: "Octubre",
@@ -1800,11 +1800,11 @@ const deliveredGifts = [
     amount: 1800000,
   },
 
-  /*{
+  {
     name: "Peter",
     date: "9 Septiembre / 2026",
     amount: 3000000,
-  },*/
+  },
 
   /*{
     name: "Brayan",
